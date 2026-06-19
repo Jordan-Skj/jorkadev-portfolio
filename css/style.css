@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* 1. Déclarez vos thèmes ici */
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, montheme;
+}
+
+/* 2. Définissez vos couleurs personnalisées ici */
+@plugin "daisyui/theme" {
+  name: "jorkatheme";
+  color-scheme: light;
+
+  /* --- COULEURS À MODIFIER --- */
+  
+  /* Couleur principale (Boutons primaires, liens) */
+  /* Format: oklch(Lumière% Saturation Teinte) */
+  --color-primary: oklch(60% 0.25 250); /* Bleu par défaut -> Changez le dernier chiffre pour la teinte */
+  --color-primary-content: oklch(100% 0 0); /* Couleur du texte SUR le bouton (blanc) */
+
+  /* Couleur secondaire (Boutons secondaires) */
+  --color-secondary: oklch(70% 0.2 160); /* Vert/Cyan par défaut */
+  --color-secondary-content: oklch(0% 0 0); /* Texte sur le bouton secondaire (noir) */
+
+  /* Couleur d'accentuation (Cases à cocher, détails) */
+  --color-accent: oklch(65% 0.25 40); /* Orange par défaut */
+  --color-accent-content: oklch(100% 0 0);
+
+  /* --- COULEURS DE FOND (Obligatoires pour que ça marche bien) --- */
+  
+  --color-base-100: oklch(98% 0.01 240); /* Fond de page principal */
+  --color-base-200: oklch(95% 0.02 240); /* Fond des cartes, menus */
+  --color-base-300: oklch(90% 0.03 240); /* Bordures, éléments survolés */
+  --color-base-content: oklch(20% 0.05 240); /* Couleur du texte principal */
+
+  /* --- ÉTATS (Optionnel, sinon daisyUI les calcule tout seul) --- */
+  --color-info: oklch(70% 0.2 220);
+  --color-success: oklch(65% 0.25 140);
+  --color-warning: oklch(80% 0.25 80);
+  --color-error: oklch(65% 0.3 30);
+}   
