@@ -15,10 +15,10 @@
   --color-primary: #1E6FFF;
   --color-primary-content: #FFFFFF;
 
-  --color-secondary: #1E6FFF;
+  --color-secondary: #8B5CF6;
   --color-secondary-content: #FFFFFF;
 
-  --color-accent: #1E6FFF;
+  --color-accent: #10B981;
   --color-accent-content: #FFFFFF;
 
   --color-neutral: #14213D;
@@ -47,3 +47,103 @@ h1, h2, h3, h4, .logo {
   font-family: var(--font-display);
 }
 
+/* ===================================================== */
+/* UTILITY : glow-spotlight - halo qui suit la souris      */
+/* ===================================================== */
+@utility glow-spotlight {
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), color-mix(in srgb, var(--color-primary) 8%, transparent), transparent 80%);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ===================================================== */
+/* UTILITY : reveal - apparition au scroll                 */
+/* ===================================================== */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@utility reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility reveal-visible-side {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===================================================== */
+/* UTILITY : tilt-card - effet 3D au survol                */
+/* ===================================================== */
+@utility tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@utility tilt-card-inner {
+  transform: translateZ(20px);
+}
+
+/* ===================================================== */
+/* UTILITY : typewriter-cursor - curseur clignotant         */
+/* ===================================================== */
+@utility typewriter-cursor {
+  &::after {
+    content: '|';
+    animation: blink 0.8s step-end infinite;
+    color: var(--color-primary);
+    margin-left: 2px;
+  }
+}
+
+@keyframes blink {
+  from, to { color: transparent; }
+  50% { color: var(--color-primary); }
+}
+
+/* ===================================================== */
+/* UTILITY : floating-blob - flottement lent des halos      */
+/* ===================================================== */
+@utility floating-blob {
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px) scale(1); }
+  50%  { transform: translateY(-15px) scale(1.05); }
+  100% { transform: translateY(5px) scale(0.95); }
+}
+
+/* ===================================================== */
+/* UTILITY : btn-gradient - CTA principal en degrade        */
+/* (remplace btn-primary la ou la v1 utilise un degrade)    */
+/* ===================================================== */
+@utility btn-gradient {
+  background-image: linear-gradient(to top right, var(--color-primary), var(--color-secondary));
+  color: var(--color-primary-content);
+  border-color: transparent;
+
+  &:hover {
+    background-image: linear-gradient(to top right, var(--color-primary), var(--color-secondary));
+    filter: brightness(1.08);
+    border-color: transparent;
+  }
+}
