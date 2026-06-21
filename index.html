@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="jorkatheme">
+<html lang="fr" data-theme="jorkatheme" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -14,29 +14,34 @@
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/aisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <header class="navbar bg-base-100 shadow-sm sticky top-0 z-50">
-        <div class="navbar-start">
-            <p class="text-xl font-bold">JORKA<span class="text-primary">.DEV</span></p>
-        </div>
-
+        <a href="#" class="navbar-start flex items-center">
+            <img src="./src/STEP 1.png" alt="Logo de JORKA.DEV" width="40" height="40" class="mx-2">
+            <h4 class="text-xl font-bold mr-4">JORKA<span class="text-primary">.DEV</span></h4>
+        </a>
         <div class="navbar-end">
-            <a href="#contact" class="btn btn-primary">Démarrer un projet</a>
+            <a href="#contact" class="btn btn-primary font-bold">Démarrer un projet</a>
             <div class="dropdown dropdown-end">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-menu-icon lucide-menu">
+                        <path d="M4 5h16" />
+                        <path d="M4 12h16" />
+                        <path d="M4 19h16" />
                     </svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a href="#about">A propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projets">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="font-bold">A propos</a></li>
+                    <li><a href="#services" class="font-bold">Services</a></li>
+                    <li><a href="#projets" class="font-bold">Project</a></li>
+                    <li><a href="#contact" class="font-bold">Contact</a></li>
                 </ul>
             </div>
 
@@ -48,17 +53,20 @@
         <section class="hero min-h-screen bg-base-200  relative overflow-hidden">
             <div class="hero-content text-center relative z-10">
                 <div class="max-w-md">
-                    <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-6">
+                    <p
+                        class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border font-bold text-xs mb-6 bg-[#1E6FFF]/20">
                         DÉVELOPPEUR WEB · KINSHASA, DRC
                     </p>
-                    <h1 class="text-5xl md:text-6xl font-bold font-display leading-tight mb-5">Je construis <br> ce que tu
-                        <span class="text-primary border-l-4 border-primary pl-2 inline-block">imagines.</span>
+                    <h1 class="text-5xl md:text-6xl font-bold font-display leading-tight mb-5">Je construis <br> ce que
+                        tu
+                        <span class="text-primary pl-2 inline-block">imagines.</span>
                     </h1>
-                    <p class="mb-5 text-lg text-base-content/70">Sites web professionnels pour les boutiques, écoles et entreprises qui veulent
+                    <p class="mb-5 text-lg text-base-content/70">Sites web professionnels pour les boutiques, écoles et
+                        entreprises qui veulent
                         exister sérieusement en ligne.</p>
                     <div class="flex gap-4 justify-center">
-                        <button class="btn btn-primary">Voir mes projets</button>
-                        <button class="btn btn-outline">Me contacter</button>
+                        <button class="btn btn-primary font-bold">Voir mes projets</button>
+                        <button class="btn btn-outline font-bold">Me contacter</button>
                     </div>
                 </div>
             </div>
@@ -67,13 +75,16 @@
         <!-- About section -->
         <section id="about" class="mx-4 mb-16 mt-10">
             <img src="./src/STEP 1.png" alt="logo de jorka.dev" class="w-80 mx-auto mb-8">
-            <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">A PROPOS</p>
+            <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">A
+                PROPOS</p>
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Un dev de Kinshasa qui construit pour toi.</h2>
             <div class="w-16 h-1 bg-primary rounded-full mb-6"></div>
-            <p class="mb-5 text-base-content/70">Je m'appelle Jorka — développeur web freelance basé à Kinshasa. Je crée des sites web
+            <p class="mb-5 text-base-content/70">Je m'appelle Jorka — développeur web freelance basé à Kinshasa. Je crée
+                des sites web
                 modernes, rapides et sur mesure pour les entreprises congolaises qui veulent une présence en ligne
                 qui inspire vraiment confiance.</p>
-            <p class="mb-5 text-base-content/70">Je ne livre pas juste un site. Je prends le temps de comprendre ton activité, tes clients
+            <p class="mb-5 text-base-content/70">Je ne livre pas juste un site. Je prends le temps de comprendre ton
+                activité, tes clients
                 et tes objectifs — pour construire quelque chose qui fonctionne vraiment pour toi.</p>
             <div class="flex flex-wrap gap-2">
                 <span class="badge badge-outline p-4 text-base-content/75">HTML</span>
@@ -89,46 +100,53 @@
         <!-- Services section -->
         <section id="services" class="mx-4 mb-16 flex flex-col justify-center items-center bg-grid relative">
             <div class="relative z-10 flex flex-col items-center w-full">
-                <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">SERVICES</p>
+                <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">
+                    SERVICES</p>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Ce que je construis pour toi</h2>
                 <div class="w-16 h-1 bg-primary rounded-full mb-6"></div>
-                <p class="mb-8 text-center text-base-content/70">Je propose une gamme complète de services pour répondre à tous tes besoins en
+                <p class="mb-8 text-center text-base-content/70">Je propose une gamme complète de services pour répondre
+                    à tous tes besoins en
                     ligne.</p>
 
                 <div class="grid gap-4 w-full">
                     <div class="card bg-base-100 shadow-xl">
                         <div class="card-body flex flex-col items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
                                 class="lucide lucide-terminal-icon lucide-terminal text-primary">
                                 <path d="M12 19h8" />
                                 <path d="m4 17 6-6-6-6" />
                             </svg>
                             <h3 class="text-xl font-bold">Développement web</h3>
-                            <p class="text-center text-base-content/70">Création de sites web modernes, responsives et performants pour
+                            <p class="text-center text-base-content/70">Création de sites web modernes, responsives et
+                                performants pour
                                 entreprises, associations et particuliers.</p>
                         </div>
                     </div>
 
                     <div class="card bg-base-100 shadow-xl">
                         <div class="card-body flex flex-col items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
                                 class="lucide lucide-database-icon lucide-database text-primary">
                                 <ellipse cx="12" cy="5" rx="9" ry="3" />
                                 <path d="M3 5V19A9 3 0 0 0 21 19V5" />
                                 <path d="M3 12A9 3 0 0 0 21 12" />
                             </svg>
                             <h3 class="text-xl font-bold text-center">Développement d'application de gestion</h3>
-                            <p class="text-center text-base-content/70">Conception de solutions sur mesure pour la gestion des écoles,
+                            <p class="text-center text-base-content/70">Conception de solutions sur mesure pour la
+                                gestion des écoles,
                                 commerces, stocks et activités administratives.</p>
                         </div>
                     </div>
 
                     <div class="card bg-base-100 shadow-xl">
                         <div class="card-body flex flex-col items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
                                 class="lucide lucide-pen-tool-icon lucide-pen-tool text-primary">
                                 <path
                                     d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" />
@@ -138,15 +156,17 @@
                                 <circle cx="11" cy="11" r="2" />
                             </svg>
                             <h3 class="text-xl font-bold text-center">UI/UX Design</h3>
-                            <p class="text-center text-base-content/70">Création d'interfaces intuitives, esthétiques et adaptées aux besoins
+                            <p class="text-center text-base-content/70">Création d'interfaces intuitives, esthétiques et
+                                adaptées aux besoins
                                 des utilisateurs.</p>
                         </div>
                     </div>
 
                     <div class="card bg-base-100 shadow-xl">
                         <div class="card-body flex flex-col items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
                                 class="lucide lucide-sparkles-icon lucide-sparkles text-primary">
                                 <path
                                     d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
@@ -155,7 +175,8 @@
                                 <circle cx="4" cy="20" r="2" />
                             </svg>
                             <h3 class="text-xl font-bold text-center">Automatisation & IA</h3>
-                            <p class="text-center text-base-content/70">Mise en place de workflows automatisés, chatbots et intégrations
+                            <p class="text-center text-base-content/70">Mise en place de workflows automatisés, chatbots
+                                et intégrations
                                 d'outils d'intelligence artificielle.</p>
                         </div>
                     </div>
@@ -165,7 +186,8 @@
 
         <!-- Projets section -->
         <section id="projets" class="flex flex-col justify-center items-center mx-4 mb-16">
-            <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">PROJETS</p>
+            <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">
+                PROJETS</p>
             <h2 class="text-3xl font-bold mb-2 text-center">Ce que j'ai déjà construit</h2>
             <div class="w-16 h-1 bg-primary rounded-full mb-8"></div>
 
@@ -177,7 +199,8 @@
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title font-bold">G.SCO.M</h3>
-                        <p class="text-base-content/70">Site web complet pour une école de Kinshasa — présentation de l'établissement, équipe,
+                        <p class="text-base-content/70">Site web complet pour une école de Kinshasa — présentation de
+                            l'établissement, équipe,
                             témoignages et contact.</p>
                         <a class="link link-primary font-medium" href="#">Voir le projet →</a>
                     </div>
@@ -190,7 +213,8 @@
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title font-bold">Chatbot WhatsApp</h3>
-                        <p class="text-base-content/70">Un chatbot intégré à WhatsApp pour une entreprise de services à Kinshasa, permettant une
+                        <p class="text-base-content/70">Un chatbot intégré à WhatsApp pour une entreprise de services à
+                            Kinshasa, permettant une
                             communication automatisée avec les clients.</p>
                         <a class="link link-primary font-medium" href="#">Voir le projet →</a>
                     </div>
@@ -203,7 +227,8 @@
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title font-bold">Jorka.Dev</h3>
-                        <p class="text-base-content/70">Design et développement complet de mon portfolio — charte graphique, animations et
+                        <p class="text-base-content/70">Design et développement complet de mon portfolio — charte
+                            graphique, animations et
                             expérience utilisateur soignée.</p>
                         <a class="link link-primary font-medium" href="#">Tu es dessus 😄</a>
                     </div>
@@ -216,7 +241,8 @@
         <!-- Contact section -->
         <section id="contact" class="flex flex-col justify-center items-center mx-4 mb-16 bg-grid relative">
             <div class="relative z-10 flex flex-col items-center w-full">
-                <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">CONTACT</p>
+                <p class="badge badge-primary badge-outline rounded-full tracking-widest px-4 py-4 border text-xs mb-4">
+                    CONTACT</p>
                 <h2 class="text-3xl font-bold mb-2 text-center">On construit quelque chose ensemble ?</h2>
                 <div class="w-16 h-1 bg-primary rounded-full mb-6"></div>
                 <p class="mb-6 text-center text-base-content/70">Dis-moi ce que tu as en tête. Un message suffit.</p>
@@ -224,27 +250,31 @@
                 <div class="card bg-base-100 shadow-xl w-full max-w-md">
                     <div class="card-body">
                         <h3 class="text-xl font-bold mb-1">Parle-moi de ton projet</h3>
-                        <p class="mb-4 text-base-content/70">Que tu aies une idée précise ou juste une envie, écris-moi. Je réponds sous 24h.
+                        <p class="mb-4 text-base-content/70">Que tu aies une idée précise ou juste une envie, écris-moi.
+                            Je réponds sous 24h.
                         </p>
 
                         <form action="#" method="post" class="flex flex-col gap-3">
                             <div class="form-control">
                                 <label class="label">
-                                    <span class="label-text text-xs tracking-widest uppercase text-base-content/60">Ton nom</span>
+                                    <span class="label-text text-xs tracking-widest uppercase text-base-content/60">Ton
+                                        nom</span>
                                 </label>
                                 <input type="text" id="name" name="name" placeholder="Ex: Marie Lutumba"
                                     class="input input-bordered w-full" required>
                             </div>
                             <div class="form-control">
                                 <label class="label">
-                                    <span class="label-text text-xs tracking-widest uppercase text-base-content/60">Ton email ou WhatsApp</span>
+                                    <span class="label-text text-xs tracking-widest uppercase text-base-content/60">Ton
+                                        email ou WhatsApp</span>
                                 </label>
                                 <input type="email" id="email" name="email" placeholder="Ex: +243 ..."
                                     class="input input-bordered w-full" required>
                             </div>
                             <div class="form-control">
                                 <label class="label">
-                                    <span class="label-text text-xs tracking-widest uppercase text-base-content/60">Ton projet</span>
+                                    <span class="label-text text-xs tracking-widest uppercase text-base-content/60">Ton
+                                        projet</span>
                                 </label>
                                 <textarea id="message" name="message" placeholder="Dis-moi ce que tu veux construire..."
                                     class="textarea textarea-bordered w-full" rows="4" required></textarea>
