@@ -9,7 +9,8 @@
     <!-- Plus Jakarta Sans (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
 
     <!-- Clash Display (Fontshare CDN) -->
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
@@ -21,39 +22,41 @@
 
 <body class="bg-base-100 text-base-content relative overflow-x-hidden">
 
-    <!-- Halo qui suit la souris (derriere le contenu) -->
-    <div id="ambient-tracker" class="glow-spotlight"></div>
-    <div class="absolute top-1/4 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none floating-blob"></div>
-    <div class="absolute top-2/3 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] pointer-events-none floating-blob" style="animation-delay: 3s;"></div>
+
 
     <!-- Header / Navigation -->
-    <header class="navbar bg-base-100/85 backdrop-blur-md sticky top-0 z-50 border-b border-base-300/50 px-4 md:px-10 transition-all duration-300">
-        <a href="#" class="navbar-start flex items-center gap-2 group w-auto">
-            <div class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-tr from-primary to-secondary rounded-xl text-primary-content font-black overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
-                <span class="text-lg relative z-10">J</span>
-            </div>
-            <h4 class="text-xl font-bold logo tracking-tight">JORKA<span class="text-primary group-hover:text-secondary transition-colors duration-300">.DEV</span></h4>
+    <header
+        class="navbar bg-base-100/85 backdrop-blur-md sticky top-0 z-50 border-b border-base-300/50 transition-all duration-300">
+        <a class="navbar-start">
+            <!--<div class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-tr from-primary to-secondary rounded-xl text-primary-content font-black overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <img src="./src/STEP 1.png">
+            </div>-->
+            <h4 class="text-xl font-bold logo tracking-tight px-4">JORKA<span
+                    class="text-primary group-hover:text-secondary transition-colors duration-300">.DEV</span></h4>
         </a>
-
-        <!-- Navigation desktop centree -->
         <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 gap-2 font-bold">
+            <ul class="menu menu-horizontal  gap-2 font-bold">
                 <li><a href="#about" class="hover:text-primary transition-colors">À propos</a></li>
                 <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
                 <li><a href="#projets" class="hover:text-primary transition-colors">Projets</a></li>
                 <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
             </ul>
         </div>
-
         <div class="navbar-end gap-3">
-            <a href="#contact" class="btn btn-gradient font-bold shadow-md shadow-primary/20 hidden sm:flex">Démarrer un projet</a>
-
-            <!-- Menu mobile -->
+            <a href="#contact"
+                class="btn btn-gradient font-bold shadow-md shadow-primary/80 hidden sm:flex bg-primary">Démarrer un
+                projet</a>
             <div class="dropdown dropdown-end lg:hidden">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100/95 backdrop-blur-md rounded-box z-50 mt-3 w-56 p-3 shadow-xl border border-base-300/50">
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100/95 backdrop-blur-md rounded-box z-50 mt-3 w-56 p-3 shadow-xl border border-base-300/50">
                     <li><a href="#about" class="py-3 font-bold">À propos</a></li>
                     <li><a href="#services" class="py-3 font-bold">Services</a></li>
                     <li><a href="#projets" class="py-3 font-bold">Projets</a></li>
@@ -66,15 +69,19 @@
         </div>
     </header>
 
+
+
     <main class="relative z-10">
         <!-- Hero section -->
         <section class="hero min-h-[calc(100vh-64px)] relative flex items-center justify-center overflow-hidden py-10">
             <div class="hero-content text-center max-w-4xl px-4 flex flex-col items-center">
 
                 <!-- Badge anime -->
-                <div class="reveal inline-flex items-center gap-2 badge badge-primary badge-outline rounded-full px-3 py-3 mb-8 bg-primary/10">
+                <div
+                    class="reveal inline-flex items-center gap-2 badge badge-primary badge-outline rounded-full px-3 py-3 mb-8 bg-primary/10">
                     <span class="w-2 h-2 rounded-full bg-primary relative flex">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     </span>
                     <span class="text-[10px] font-bold tracking-widest uppercase">Développeur web · Kinshasa, DRC</span>
                 </div>
@@ -82,32 +89,27 @@
                 <!-- Titre dynamique avec typewriter -->
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 reveal">
                     Je construis ce que tu <br>
-                    <span id="typewriter-text" class="text-primary typewriter-cursor inline-block min-w-[200px]"></span>
+                    <span id="typewriter-text" class="text-primary typewriter-cursor inline-block min-w-50"></span>
                 </h1>
 
-                <p class="mb-8 text-lg text-base-content/60 max-w-2xl reveal leading-relaxed" style="transition-delay: 0.1s;">
-                    Sites web professionnels et applications de gestion sur mesure pour les boutiques, écoles et entreprises qui veulent exister sérieusement en ligne.
+                <p class="mb-8 text-lg text-base-content/60 max-w-2xl reveal leading-relaxed"
+                    style="transition-delay: 0.1s;">
+                    Sites web professionnels et applications de gestion sur mesure pour les boutiques, écoles et
+                    entreprises qui veulent exister sérieusement en ligne.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto reveal" style="transition-delay: 0.2s;">
-                    <a href="#projets" class="btn btn-gradient font-bold px-8 shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300">
+                <div class="flex flex-col gap-4 justify-center w-full sm:w-auto reveal" style="transition-delay: 0.2s;">
+                    <a href="#projets"
+                        class="btn btn-primary font-bold px-8 shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300">
                         Voir mes projets
                     </a>
-                    <a href="#contact" class="btn btn-outline border-base-content/30 text-base-content hover:bg-base-content hover:text-base-100 font-bold px-8 hover:-translate-y-1 transition-all duration-300">
+                    <a href="#contact"
+                        class="btn btn-outline border-base-content/30 text-base-content hover:bg-base-content hover:text-base-100 font-bold px-8 hover:-translate-y-1 transition-all duration-300">
                         Me contacter
                     </a>
                 </div>
 
-                <!-- Indicateur de scroll : main qui glisse vers le bas -->
-                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-base-content/40 hover:text-primary transition-colors cursor-pointer hidden md:flex reveal" style="transition-delay: 0.4s;">
-                    <span class="text-xs tracking-widest font-bold uppercase">Découvrir</span>
-                    <svg class="w-7 h-7 animate-bounce" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M8 11V6a2 2 0 1 1 4 0v5" />
-                        <path d="M12 10.5V4a2 2 0 1 1 4 0v7" />
-                        <path d="M16 9.5a2 2 0 1 1 4 0V14a8 8 0 0 1-8 8h-1.5a8 8 0 0 1-6.5-3.3L2 15.5c-.7-1.3.1-2.9 1.6-3.1.9-.1 1.8.4 2.2 1.2L7 15" />
-                        <line x1="11" y1="17" x2="11" y2="20.5" />
-                    </svg>
-                </div>
+
 
             </div>
         </section>
@@ -119,13 +121,18 @@
                 <!-- Colonne gauche : logo flottant -->
                 <div class="lg:col-span-5 flex justify-center reveal-left">
                     <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-2xl blur opacity-30 group-hover:opacity-55 transition duration-1000 group-hover:duration-200"></div>
-                        <div class="relative card bg-base-200 border border-base-300 shadow-xl p-8 max-w-[340px] items-center text-center">
-                            <div class="w-32 h-32 rounded-3xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-2xl relative overflow-hidden group-hover:rotate-6 transition-transform duration-500">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-2xl blur opacity-30 group-hover:opacity-55 transition duration-1000 group-hover:duration-200">
+                        </div>
+                        <div
+                            class="relative card bg-base-200 border border-base-300 shadow-xl p-8 max-w-[340px] items-center text-center">
+                            <div
+                                class="w-32 h-32 rounded-3xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-2xl relative overflow-hidden group-hover:rotate-6 transition-transform duration-500">
                                 <span class="text-primary-content text-5xl font-black logo select-none">J</span>
                             </div>
                             <h3 class="text-xl font-bold logo mt-6 tracking-wide">JORKA.DEV</h3>
-                            <p class="text-xs text-base-content/60 mt-1 uppercase tracking-widest font-bold">Kinshasa Tech Force</p>
+                            <p class="text-xs text-base-content/60 mt-1 uppercase tracking-widest font-bold">Kinshasa
+                                Tech Force</p>
                             <div class="divider my-2"></div>
                             <div class="flex gap-3">
                                 <span class="badge badge-outline badge-primary">Freelance</span>
@@ -138,30 +145,42 @@
                 <!-- Colonne droite : texte -->
                 <div class="lg:col-span-7 flex flex-col gap-6 reveal-right">
                     <div>
-                        <p class="badge badge-primary badge-outline rounded-full px-4 py-4 text-xs tracking-widest mb-2">À PROPOS DE MOI</p>
-                        <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
+                        <p class="text-xs tracking-widest mb-2 font-bold text-primary">À PROPOS DE MOI</p>
+                        <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-base-content/80">
                             Un développeur de Kinshasa qui construit pour toi.
                         </h2>
                         <div class="w-16 h-1.5 bg-primary rounded-full mt-4"></div>
                     </div>
 
                     <p class="text-base-content/70 text-lg leading-relaxed">
-                        Je m'appelle Jorka — développeur web freelance basé à Kinshasa. Je crée des sites web modernes, rapides et sur mesure pour les entreprises congolaises qui veulent une présence en ligne qui inspire vraiment confiance.
+                        Je m'appelle Jorka — développeur web freelance basé à Kinshasa. Je crée des sites web modernes,
+                        rapides et sur mesure pour les entreprises congolaises qui veulent une présence en ligne qui
+                        inspire vraiment confiance.
                     </p>
                     <p class="text-base-content/70 text-lg leading-relaxed">
-                        Je ne livre pas juste un site. Je prends le temps de comprendre ton activité, tes clients et tes objectifs — pour construire quelque chose qui fonctionne vraiment pour toi.
+                        Je ne livre pas juste un site. Je prends le temps de comprendre ton activité, tes clients et tes
+                        objectifs — pour construire quelque chose qui fonctionne vraiment pour toi.
                     </p>
 
                     <div class="flex flex-col gap-3">
-                        <p class="text-xs uppercase font-bold tracking-wider text-base-content/60">Ma stack favorite :</p>
+                        <p class="text-xs uppercase font-bold tracking-wider text-base-content/60">Ma stack favorite :
+                        </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">HTML</span>
-                            <span class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">CSS</span>
-                            <span class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">JavaScript</span>
-                            <span class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Tailwind CSS</span>
-                            <span class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">DaisyUI</span>
-                            <span class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Django</span>
-                            <span class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Python</span>
+                            <span
+                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">HTML</span>
+                            <span
+                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">CSS</span>
+                            <span
+                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">JavaScript</span>
+                            <span
+                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Tailwind
+                                CSS</span>
+                            <span
+                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">DaisyUI</span>
+                            <span
+                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Django</span>
+                            <span
+                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Python</span>
                         </div>
                     </div>
                 </div>
@@ -173,54 +192,96 @@
         <section id="services" class="py-24 px-4 bg-base-200/50 relative overflow-hidden scroll-mt-20">
             <div class="max-w-6xl mx-auto flex flex-col items-center relative z-10">
 
-                <p class="badge badge-primary badge-outline rounded-full px-4 py-4 text-xs tracking-widest mb-2 reveal">SERVICES</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal">Ce que je construis pour toi</h2>
+                <p class="py-4 text-xs tracking-widest mb-2 reveal font-bold text-primary">SERVICES</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal text-base-content/80">Ce que je
+                    construis pour toi</h2>
                 <div class="w-16 h-1.5 bg-primary rounded-full mb-6 reveal"></div>
-                <p class="mb-16 text-center text-base-content/70 max-w-2xl text-lg reveal">Je propose une gamme complète de services pour répondre à tous tes besoins en ligne.</p>
+                <p class="mb-16 text-center text-base-content/70 max-w-2xl text-lg reveal">Je propose une gamme complète
+                    de services pour répondre à tous tes besoins en ligne.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
 
                     <!-- Card 1 -->
-                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300">
+                    <div
+                        class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300">
                         <div class="card-body items-center text-center tilt-card-inner">
-                            <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19h8" /><path d="m4 17 6-6-6-6" /></svg>
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 19h8" />
+                                    <path d="m4 17 6-6-6-6" />
+                                </svg>
                             </div>
                             <h3 class="card-title text-xl">Développement Web</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Création de sites web modernes, responsives et performants pour entreprises, associations et particuliers.</p>
+                            <p class="text-base-content/70 text-sm leading-relaxed">Création de sites web modernes,
+                                responsives et performants pour entreprises, associations et particuliers.</p>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300" style="transition-delay: 0.1s;">
+                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300"
+                        style="transition-delay: 0.1s;">
                         <div class="card-body items-center text-center tilt-card-inner">
-                            <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg>
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                    <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                                    <path d="M3 12A9 3 0 0 0 21 12" />
+                                </svg>
                             </div>
                             <h3 class="card-title text-xl">Applications de gestion</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Conception de solutions sur mesure pour la gestion des écoles, commerces, stocks et activités administratives.</p>
+                            <p class="text-base-content/70 text-sm leading-relaxed">Conception de solutions sur mesure
+                                pour la gestion des écoles, commerces, stocks et activités administratives.</p>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300" style="transition-delay: 0.2s;">
+                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300"
+                        style="transition-delay: 0.2s;">
                         <div class="card-body items-center text-center tilt-card-inner">
-                            <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" /><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" /><path d="m2.3 2.3 7.286 7.286" /><circle cx="11" cy="11" r="2" /></svg>
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" />
+                                    <path
+                                        d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" />
+                                    <path d="m2.3 2.3 7.286 7.286" />
+                                    <circle cx="11" cy="11" r="2" />
+                                </svg>
                             </div>
                             <h3 class="card-title text-xl">UI/UX Design</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Création d'interfaces intuitives, esthétiques et parfaitement adaptées aux besoins de tes utilisateurs finaux.</p>
+                            <p class="text-base-content/70 text-sm leading-relaxed">Création d'interfaces intuitives,
+                                esthétiques et parfaitement adaptées aux besoins de tes utilisateurs finaux.</p>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300" style="transition-delay: 0.3s;">
+                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300"
+                        style="transition-delay: 0.3s;">
                         <div class="card-body items-center text-center tilt-card-inner">
-                            <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /><path d="M20 2v4" /><path d="M22 4h-4" /><circle cx="4" cy="20" r="2" /></svg>
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+                                    <path d="M20 2v4" />
+                                    <path d="M22 4h-4" />
+                                    <circle cx="4" cy="20" r="2" />
+                                </svg>
                             </div>
                             <h3 class="card-title text-xl">Automatisation & IA</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Mise en place de flux de travail automatisés, chatbots d'assistance intelligente et connexions API complexes.</p>
+                            <p class="text-base-content/70 text-sm leading-relaxed">Mise en place de flux de travail
+                                automatisés, chatbots d'assistance intelligente et connexions API complexes.</p>
                         </div>
                     </div>
 
@@ -231,7 +292,7 @@
         <!-- Projets section -->
         <section id="projets" class="py-24 px-4 max-w-6xl mx-auto scroll-mt-20">
             <div class="flex flex-col items-center">
-                <p class="badge badge-primary badge-outline rounded-full px-4 py-4 text-xs tracking-widest mb-2 reveal">PROJETS</p>
+                <p class="py-4 text-xs tracking-widest mb-2 reveal font-bold text-primary">PROJETS</p>
                 <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal">Ce que j'ai déjà construit</h2>
                 <div class="w-16 h-1.5 bg-primary rounded-full mb-12 reveal"></div>
 
@@ -239,30 +300,40 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
 
                     <!-- Projet 1 : G.SCO.M -->
-                    <div class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal">
+                    <div
+                        class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal">
                         <figure class="relative h-48 overflow-hidden">
-                            <img src="https://imgs.search.brave.com/Xof85GKAQnyY2iuS_Lg2CWVM0LQ4ZP_xeynFG8y3sJU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jb2xv/cmxpYi5jb20vd3Av/d3AtY29udGVudC91/cGxvYWRzL3NpdGVz/LzIvMjBfc2Nob29s/LXdlYnNpdGVzLWRl/c2lnbnMuanBn" alt="Aperçu du site web G.SCO.M" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="./src/Capture d'écran_20260621_230934.png" alt="Aperçu du site web G.SCO.M"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute top-3 left-3">
                                 <span class="badge badge-primary font-bold shadow">Web</span>
                             </div>
                         </figure>
                         <div class="card-body">
                             <h3 class="card-title text-xl">G.SCO.M</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Site web complet pour une école de Kinshasa — présentation de l'établissement, équipe, témoignages et contact.</p>
+                            <p class="text-base-content/70 text-sm leading-relaxed">Site web complet pour une école de
+                                Kinshasa — présentation de l'établissement, équipe, témoignages et contact.</p>
                             <div class="card-actions justify-between items-center mt-2">
                                 <div class="flex gap-1.5">
                                     <span class="badge badge-sm badge-ghost">HTML</span>
-                                    <span class="badge badge-sm badge-ghost">Tailwind</span>
+                                    <span class="badge badge-sm badge-ghost">CSS</span>
+                                    <span class="badge badge-sm badge-ghost">JAVASCRIPT</span>
                                 </div>
-                                <a class="link link-primary font-bold inline-flex items-center gap-1 hover:gap-2 transition-all" href="#">
-                                    Voir <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                <a class="link link-primary font-bold inline-flex items-center gap-1 hover:gap-2 transition-all"
+                                    href="#">
+                                    Voir <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Projet 2 : Chatbot WhatsApp -->
-                    <div class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 0.1s;">
+                    <!--  <div class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 0.1s;">
                         <figure class="relative h-48 overflow-hidden">
                             <img src="https://imgs.search.brave.com/PPGA7DB0n7PA_gaivNAuERjq7hDzAWaRzfxTC76HDvI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTky/MzY3MTI2Ny9waG90/by9jaGF0Ym90LWNv/bmNlcHQtb3Blbi1h/aS1hcnRpZmljaWFs/LWludGVsbGlnZW5j/ZS1idXNpbmVzc21h/bi11c2luZy10ZWNo/bm9sb2d5LXNtYXJ0/LXJvYm90LWFpLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1R/Y0JSZV9hMGdlcHNQ/eTlxQl9TQWJEX3NQ/eXpWRVdBY1JLNzFf/VWZWYndvPQ" alt="Illustration d'un chatbot WhatsApp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute top-3 left-3">
@@ -283,18 +354,20 @@
                             </div>
                         </div>
                     </div>
-
+                -->
                     <!-- Projet 3 : Jorka.Dev -->
-                    <div class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 0.2s;">
+                    <div class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal"
+                        style="transition-delay: 0.2s;">
                         <figure class="relative h-48 overflow-hidden">
-                            <img src="https://imgs.search.brave.com/Xof85GKAQnyY2iuS_Lg2CWVM0LQ4ZP_xeynFG8y3sJU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jb2xv/cmxpYi5jb20vd3Av/d3AtY29udGVudC91/cGxvYWRzL3NpdGVz/LzIvMjBfc2Nob29s/LXdlYnNpdGVzLWRl/c2lnbnMuanBn" alt="Aperçu du portfolio Jorka.Dev" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="./src/jorkadev.png">
                             <div class="absolute top-3 left-3">
                                 <span class="badge badge-accent font-bold shadow">Web</span>
                             </div>
                         </figure>
                         <div class="card-body">
                             <h3 class="card-title text-xl">Jorka.Dev</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Design et développement complet de mon portfolio — charte graphique fluide, animations immersives et UX/UI soignée.</p>
+                            <p class="text-base-content/70 text-sm leading-relaxed">Design et développement complet de
+                                mon portfolio — charte graphique fluide, animations immersives et UX/UI soignée.</p>
                             <div class="card-actions justify-between items-center mt-2">
                                 <div class="flex gap-1.5">
                                     <span class="badge badge-sm badge-ghost">HTML</span>
@@ -311,7 +384,8 @@
 
                 <!-- CTA centralise -->
                 <div class="mt-12 reveal">
-                    <button onclick="document.getElementById('contact').scrollIntoView();" class="btn btn-outline btn-wide font-bold hover:scale-105 active:scale-95 transition-all">
+                    <button onclick="document.getElementById('contact').scrollIntoView();"
+                        class="btn btn-outline btn-wide font-bold hover:scale-105 active:scale-95 transition-all">
                         Démarrer un projet personnalisé
                     </button>
                 </div>
@@ -321,50 +395,80 @@
         <!-- Contact section -->
         <section id="contact" class="py-24 px-4 bg-base-200/50 relative overflow-hidden scroll-mt-20">
             <div class="max-w-6xl mx-auto flex flex-col items-center relative z-10">
-                <p class="badge badge-primary badge-outline rounded-full px-4 py-4 text-xs tracking-widest mb-2 reveal">CONTACT</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal">On construit quelque chose ensemble ?</h2>
+                <p class="text-xs tracking-widest mb-2 reveal font-extrabold text-primary">CONTACT</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal">On construit quelque chose ensemble ?
+                </h2>
                 <div class="w-16 h-1.5 bg-primary rounded-full mb-6 reveal"></div>
-                <p class="mb-12 text-center text-base-content/70 max-w-2xl text-lg reveal">Dis-moi ce que tu as en tête. Je réponds généralement sous moins de 24h.</p>
+                <p class="mb-12 text-center text-base-content/70 max-w-2xl text-lg reveal">Dis-moi ce que tu as en tête.
+                    Je réponds généralement sous moins de 24h.</p>
 
                 <!-- Carte du formulaire -->
-                <div class="card bg-base-100 shadow-2xl w-full max-w-xl border border-base-300 relative overflow-hidden reveal">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
-                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div
+                    class="card bg-base-100 shadow-2xl w-full max-w-xl border border-base-300 relative overflow-hidden reveal">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl pointer-events-none">
+                    </div>
 
                     <div class="card-body p-8 sm:p-10 relative z-10" id="contact-form-container">
                         <h3 class="text-2xl font-bold mb-1 text-center sm:text-left">Parle-moi de ton projet</h3>
-                        <p class="mb-6 text-base-content/70 text-sm text-center sm:text-left">Que tu aies une idée précise ou juste une envie d'échanger, écris-moi !</p>
+                        <p class="mb-6 text-base-content/70 text-sm text-center sm:text-left">Que tu aies une idée
+                            précise ou juste une envie d'échanger, écris-moi !</p>
 
                         <form id="portfolio-contact-form" class="flex flex-col gap-4">
 
                             <label class="form-control">
-                                <div class="label"><span class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Ton nom</span></div>
-                                <input type="text" id="contact-name" name="name" placeholder="Ex: Marie Lutumba" class="input input-bordered w-full focus:border-primary transition-all duration-300" required>
+                                <div class="label"><span
+                                        class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Ton
+                                        nom</span></div>
+                                <input type="text" id="contact-name" name="name" placeholder="Ex: Jorka Dev"
+                                    class="input input-bordered w-full focus:border-primary transition-all duration-300"
+                                    required>
                             </label>
 
                             <label class="form-control">
-                                <div class="label"><span class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Ton email ou WhatsApp</span></div>
-                                <input type="text" id="contact-email" name="email" placeholder="Ex: marie@gmail.com ou +243..." class="input input-bordered w-full focus:border-primary transition-all duration-300" required>
+                                <div class="label"><span
+                                        class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Ton
+                                        email ou WhatsApp</span></div>
+                                <input type="text" id="contact-email" name="email"
+                                    placeholder="Ex: jorka@gmail.com ou +243..."
+                                    class="input input-bordered w-full focus:border-primary transition-all duration-300"
+                                    required>
                             </label>
 
                             <label class="form-control">
-                                <div class="label"><span class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Détails du projet</span></div>
-                                <textarea id="contact-message" name="message" placeholder="Dis-moi ce que tu veux construire..." class="textarea textarea-bordered w-full min-h-[120px] focus:border-primary transition-all duration-300" required></textarea>
+                                <div class="label"><span
+                                        class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Détails
+                                        du projet</span></div>
+                                <textarea id="contact-message" name="message"
+                                    placeholder="Dis-moi ce que tu veux construire..."
+                                    class="textarea textarea-bordered w-full min-h-[120px] focus:border-primary transition-all duration-300"
+                                    required></textarea>
                             </label>
 
-                            <button type="submit" id="submit-btn" class="btn btn-gradient w-full mt-2 font-bold shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300">
+                            <button type="submit" id="submit-btn"
+                                class="btn btn-gradient bg-primary w-full mt-2 font-bold shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300">
                                 Envoyer le message
                             </button>
                         </form>
                     </div>
 
                     <!-- Etat succes anime -->
-                    <div id="success-message-container" style="display: none;" class="absolute inset-0 bg-base-100 flex-col items-center justify-center p-10 text-center z-20">
-                        <div class="w-20 h-20 rounded-full bg-success/10 text-success flex items-center justify-center mb-6 scale-0 transition-all duration-500 ease-out" id="success-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                    <div id="success-message-container" style="display: none;"
+                        class="absolute inset-0 bg-base-100 flex-col items-center justify-center p-10 text-center z-20">
+                        <div class="w-20 h-20 rounded-full bg-success/10 text-success flex items-center justify-center mb-6 scale-0 transition-all duration-500 ease-out"
+                            id="success-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
                         </div>
                         <h3 class="text-3xl font-bold mb-2 text-success">Message envoyé !</h3>
-                        <p class="text-base-content/70 max-w-sm mb-8">Merci pour ta confiance. Je vais analyser tes besoins et revenir vers toi sous moins de 24h.</p>
+                        <p class="text-base-content/70 max-w-sm mb-8">Merci pour ta confiance. Je vais analyser tes
+                            besoins et revenir vers toi sous moins de 24h.</p>
                         <button onclick="resetContactForm();" class="btn btn-ghost btn-sm text-primary font-bold">
                             Envoyer un autre message
                         </button>
@@ -379,20 +483,41 @@
     <footer class="footer footer-center p-12 bg-base-200 text-base-content border-t border-base-300 relative z-10">
         <div class="flex flex-col items-center gap-4">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-lg text-primary-content font-black">
-                    <span>J</span>
-                </div>
+
                 <p class="text-xl font-bold logo tracking-wider">JORKA<span class="text-primary">.DEV</span></p>
             </div>
-            <p class="text-base-content/70 text-sm max-w-sm leading-relaxed">Je donne vie à tes visions numériques. Du sur-mesure d'excellence pour valoriser ton identité.</p>
+            <p class="text-base-content/70 text-sm max-w-sm leading-relaxed">Je donne vie à tes visions numériques. Du
+                sur-mesure d'excellence pour valoriser ton identité.</p>
 
-            <div class="flex gap-4 my-2">
-                <a href="#about" class="link link-hover text-sm text-base-content/60 hover:text-primary transition-colors">À propos</a>
-                <a href="#services" class="link link-hover text-sm text-base-content/60 hover:text-primary transition-colors">Services</a>
-                <a href="#projets" class="link link-hover text-sm text-base-content/60 hover:text-primary transition-colors">Projets</a>
-                <a href="#contact" class="link link-hover text-sm text-base-content/60 hover:text-primary transition-colors">Contact</a>
-            </div>
+            <nav class="md:place-self-center md:justify-self-end">
+                <div class="grid grid-flow-col gap-4">
+                    <a href="https://github.com/Jordan-Skj">
+                        <svg aria-label="GitHub logo" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24">
+                            <path fill="white"
+                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z">
+                            </path>
+                        </svg>
 
+                    </a>
+                    <a href="https://api.whatsapp.com/message/XDNKI4U5LIDOO1?autoload=1&app_absent=0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="fill-current">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z" />
+                        </svg>
+
+                    </a>
+                    <a href="https://www.facebook.com/jordan.shongo.2025">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="fill-current">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
             <div class="w-16 h-px bg-base-300"></div>
             <p class="text-base-content/50 text-xs">© 2026 JORKA.DEV. Tous droits réservés.</p>
         </div>
@@ -402,14 +527,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            /* 1. HALO QUI SUIT LA SOURIS */
-            const ambientTracker = document.getElementById('ambient-tracker');
-            document.addEventListener('mousemove', (e) => {
-                const x = e.clientX;
-                const y = e.clientY + window.scrollY;
-                ambientTracker.style.setProperty('--mouse-x', `${x}px`);
-                ambientTracker.style.setProperty('--mouse-y', `${y}px`);
-            });
+            
 
             /* 2. EFFET TYPEWRITER DANS LE HERO */
             const words = ["imagines.", "rêves.", "veux créer.", "conçois."];
@@ -547,7 +665,7 @@
                 });
             }
 
-            window.resetContactForm = function() {
+            window.resetContactForm = function () {
                 successContainer.style.display = 'none';
                 successIcon.classList.add('scale-0');
                 successIcon.classList.remove('scale-100');
@@ -555,6 +673,7 @@
 
         });
     </script>
+
 </body>
 
 </html>
