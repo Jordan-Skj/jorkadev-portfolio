@@ -1,24 +1,22 @@
 {
-  "name": "jorkadevportfolio",
-  "version": "1.0.0",
-  "description": "mon portfolio personelle",
-  "main": "index.js",
+  "name": "jorkadev-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently -k -n CSS,VITE -c blue,cyan \"npm:dev:css\" \"npm:dev:vite\"",
+    "dev:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "dev:vite": "vite --host 0.0.0.0",
+    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "build": "npm run build:css && vite build",
+    "preview": "vite preview --host 0.0.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jordan-Skj/Projet-dunia.git"
-  },
-  "author": "JorkaDev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Jordan-Skj/Projet-dunia/issues"
-  },
-  "homepage": "https://github.com/Jordan-Skj/Projet-dunia#readme",
-  "dependencies": {
-    "@tailwindcss/cli": "^4.3.1",
-    "daisyui": "^5.5.23",
-    "tailwindcss": "^4.3.1"
+  "devDependencies": {
+    "@fontsource/inter": "5.3.0",
+    "@fontsource/space-grotesk": "5.3.0",
+    "@tailwindcss/cli": "4.3.3",
+    "concurrently": "9.2.1",
+    "tailwindcss": "4.3.3",
+    "vite": "8.3.0"
   }
 }

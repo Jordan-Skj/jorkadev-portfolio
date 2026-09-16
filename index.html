@@ -1,679 +1,691 @@
-<!DOCTYPE html>
-<html lang="fr" data-theme="jorkatheme" class="scroll-smooth">
-
+<!doctype html>
+<html lang="fr-CD" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JORKA.DEV — Portfolio Interactif</title>
 
-    <!-- Plus Jakarta Sans (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
+    <!-- À remplacer une seule fois avant la mise en ligne : VOTRE-DOMAINE.com -->
+    <title>Création de sites web à Kinshasa | JorkaDev</title>
+    <meta name="description" content="JorkaDev crée des sites web modernes et rapides pour les entreprises, écoles et associations à Kinshasa et partout en RDC, à partir de 100 $.">
+    <meta name="author" content="Jourdain, créateur de JorkaDev">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#070D1F">
+    <meta name="color-scheme" content="dark">
 
-    <!-- Clash Display (Fontshare CDN) -->
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
-    <meta name="google-site-verification" content="THvW2BzvIfzXMXxQ1lWzMtj74BvRF3MXLlSAgigVtkU" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Référencement local -->
+    <meta name="geo.region" content="CD-KN">
+    <meta name="geo.placename" content="Kinshasa">
+    <link rel="canonical" href="https://VOTRE-DOMAINE.com/">
+    <link rel="alternate" hreflang="fr-CD" href="https://VOTRE-DOMAINE.com/">
+    <link rel="alternate" hreflang="x-default" href="https://VOTRE-DOMAINE.com/">
+
+    <!-- Partage Facebook, WhatsApp et LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_CD">
+    <meta property="og:site_name" content="JorkaDev">
+    <meta property="og:title" content="JorkaDev — Création de sites web à Kinshasa et en RDC">
+    <meta property="og:description" content="Des sites web professionnels, rapides et adaptés aux entreprises, écoles, associations et entrepreneurs congolais.">
+    <meta property="og:url" content="https://VOTRE-DOMAINE.com/">
+    <meta property="og:image" content="https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="539">
+    <meta property="og:image:alt" content="JorkaDev, création de sites web professionnels en RDC">
+
+    <!-- Aperçu X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JorkaDev — Création de sites web à Kinshasa">
+    <meta name="twitter:description" content="Des sites modernes, rapides et utiles pour développer la présence en ligne de votre activité.">
+    <meta name="twitter:image" content="https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png">
+    <meta name="twitter:image:alt" content="JorkaDev, création de sites web professionnels en RDC">
+
+    <link rel="icon" type="image/png" href="./src/images/logo-jorkadev.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="preload" as="image" href="./src/profile.png" fetchpriority="high">
+    <link rel="stylesheet" href="./src/output.css">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    <!-- Données structurées : entreprise, offres, auteur et FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://VOTRE-DOMAINE.com/#website",
+          "url": "https://VOTRE-DOMAINE.com/",
+          "name": "JorkaDev",
+          "description": "Création de sites web professionnels à Kinshasa et partout en République démocratique du Congo.",
+          "inLanguage": "fr-CD",
+          "publisher": { "@id": "https://VOTRE-DOMAINE.com/#business" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://VOTRE-DOMAINE.com/#webpage",
+          "url": "https://VOTRE-DOMAINE.com/",
+          "name": "Création de sites web à Kinshasa | JorkaDev",
+          "description": "JorkaDev crée des sites web modernes et rapides pour les entreprises, écoles et associations à Kinshasa et partout en RDC.",
+          "isPartOf": { "@id": "https://VOTRE-DOMAINE.com/#website" },
+          "about": { "@id": "https://VOTRE-DOMAINE.com/#business" },
+          "primaryImageOfPage": { "@id": "https://VOTRE-DOMAINE.com/#primaryimage" },
+          "inLanguage": "fr-CD"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://VOTRE-DOMAINE.com/#primaryimage",
+          "url": "https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png",
+          "contentUrl": "https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png",
+          "width": 1080,
+          "height": 539,
+          "caption": "JorkaDev — Création de sites web professionnels en RDC"
+        },
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://VOTRE-DOMAINE.com/#business",
+          "name": "JorkaDev",
+          "url": "https://VOTRE-DOMAINE.com/",
+          "logo": "https://VOTRE-DOMAINE.com/src/images/logo-jorkadev.png",
+          "image": "https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png",
+          "description": "Service de création de landing pages, sites vitrines, portfolios, refontes et optimisation SEO de base pour les activités en RDC.",
+          "slogan": "Le web, pensé pour votre entreprise.",
+          "email": "mailto:jorkaskj@proton.me",
+          "telephone": "+243808981347",
+          "priceRange": "À partir de 100 USD",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kinshasa",
+            "addressRegion": "Kinshasa",
+            "addressCountry": "CD"
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Kinshasa" },
+            { "@type": "Country", "name": "République démocratique du Congo" }
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Jourdain",
+            "jobTitle": "Développeur web et créateur de JorkaDev"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+243808981347",
+            "email": "jorkaskj@proton.me",
+            "contactType": "service client",
+            "availableLanguage": ["français"],
+            "areaServed": "CD"
+          },
+          "sameAs": ["https://www.facebook.com/jorkadev"],
+          "knowsAbout": [
+            "Création de sites web",
+            "Landing pages",
+            "Sites vitrines",
+            "Design responsive",
+            "Référencement naturel",
+            "Intégration WhatsApp"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Offres de création de sites web",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Landing page",
+                "price": "100",
+                "priceCurrency": "USD",
+                "url": "https://VOTRE-DOMAINE.com/#services",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Création de landing page",
+                  "description": "Page professionnelle responsive avec contact WhatsApp, SEO de base et mise en ligne."
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Site vitrine multipage",
+                "price": "180",
+                "priceCurrency": "USD",
+                "url": "https://VOTRE-DOMAINE.com/#services",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Création de site vitrine multipage",
+                  "description": "Site responsive pouvant comporter jusqu’à cinq pages, avec SEO de base et formulaire de contact."
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Projet web personnalisé",
+                "url": "https://VOTRE-DOMAINE.com/#contact",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Développement web personnalisé",
+                  "description": "Projet sur devis selon les fonctionnalités et les intégrations demandées."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://VOTRE-DOMAINE.com/#faq-schema",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Que comprend le prix affiché ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le prix comprend les éléments indiqués dans l’offre choisie, le design responsive, l’optimisation de base et la mise en ligne. Le périmètre exact est confirmé dans le devis avant le démarrage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de temps faut-il pour créer un site ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Une landing page demande généralement cinq à sept jours ouvrés. Un site vitrine multipage demande généralement dix à quinze jours ouvrés après réception de tous les contenus nécessaires."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le site fonctionnera-t-il sur téléphone ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Chaque site est conçu pour s’adapter aux téléphones, tablettes et ordinateurs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dois-je être à Kinshasa pour travailler avec JorkaDev ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Le brief, les échanges, les validations et la livraison peuvent se faire à distance par WhatsApp et par e-mail, partout en RDC."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le site apparaîtra-t-il immédiatement sur Google ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le site reçoit de bonnes fondations techniques et une optimisation SEO de base. Son indexation et son positionnement évoluent ensuite selon le contenu, la concurrence et le temps."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
-<body class="bg-base-100 text-base-content relative overflow-x-hidden">
+<body class="bg-jorka-dark font-body text-white antialiased">
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+    <div id="scroll-progress" class="fixed left-0 top-0 z-[70] h-0.5 w-0 bg-jorka-blue" aria-hidden="true"></div>
 
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+        <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8" aria-label="Navigation principale">
+            <a href="#accueil" class="font-heading text-2xl font-bold tracking-tight text-white" aria-label="JorkaDev, retour à l’accueil">
+                Jorka<span class="text-jorka-blue">Dev</span>
+            </a>
 
-
-    <!-- Header / Navigation -->
-    <header
-        class="navbar bg-base-100/85 backdrop-blur-md sticky top-0 z-50 border-b border-base-300/50 transition-all duration-300">
-        <a class="navbar-start">
-            <!--<div class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-tr from-primary to-secondary rounded-xl text-primary-content font-black overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
-                <img src="./src/STEP 1.png">
-            </div>-->
-            <h4 class="text-xl font-bold logo tracking-tight px-4">JORKA<span
-                    class="text-primary group-hover:text-secondary transition-colors duration-300">.DEV</span></h4>
-        </a>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal  gap-2 font-bold">
-                <li><a href="#about" class="hover:text-primary transition-colors">À propos</a></li>
-                <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
-                <li><a href="#projets" class="hover:text-primary transition-colors">Projets</a></li>
-                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+            <ul class="hidden items-center gap-7 lg:flex">
+                <li><a class="nav-link" data-nav-link href="#accueil">Accueil</a></li>
+                <li><a class="nav-link" data-nav-link href="#services">Services</a></li>
+                <li><a class="nav-link" data-nav-link href="#realisations">Réalisations</a></li>
+                <li><a class="nav-link" data-nav-link href="#processus">Processus</a></li>
+                <li><a class="nav-link" data-nav-link href="#a-propos">À propos</a></li>
+                <li><a class="nav-link" data-nav-link href="#faq">FAQ</a></li>
             </ul>
-        </div>
-        <div class="navbar-end gap-3">
-            <a href="#contact"
-                class="btn btn-gradient font-bold shadow-md shadow-primary/80 hidden sm:flex bg-primary">Démarrer un
-                projet</a>
-            <div class="dropdown dropdown-end lg:hidden">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="4" x2="20" y1="12" y2="12" />
-                        <line x1="4" x2="20" y1="6" y2="6" />
-                        <line x1="4" x2="20" y1="18" y2="18" />
+
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+                   target="_blank" rel="noopener noreferrer" class="button-primary hidden lg:inline-flex">
+                    Discuter du projet
+                </a>
+                <button id="menu-button" type="button" class="menu-button lg:hidden" aria-controls="mobile-menu"
+                        aria-expanded="false" aria-label="Ouvrir le menu">
+                    <svg data-menu-icon class="size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" />
                     </svg>
-                </div>
-                <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100/95 backdrop-blur-md rounded-box z-50 mt-3 w-56 p-3 shadow-xl border border-base-300/50">
-                    <li><a href="#about" class="py-3 font-bold">À propos</a></li>
-                    <li><a href="#services" class="py-3 font-bold">Services</a></li>
-                    <li><a href="#projets" class="py-3 font-bold">Projets</a></li>
-                    <li><a href="#contact" class="py-3 font-bold">Contact</a></li>
-                    <li class="mt-2 border-t border-base-300 pt-2">
-                        <a href="#contact" class="btn btn-gradient btn-sm w-full font-bold">Démarrer un projet</a>
-                    </li>
-                </ul>
+                    <svg data-close-icon class="hidden size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 18 18 6M6 6l12 12" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" />
+                    </svg>
+                    <span class="sr-only" data-menu-label>Ouvrir le menu</span>
+                </button>
             </div>
+        </nav>
+
+        <div id="mobile-menu" class="border-t border-white/10 bg-jorka-dark/95 px-5 pb-6 pt-3 shadow-2xl backdrop-blur-xl lg:hidden" hidden>
+            <ul class="mx-auto flex max-w-7xl flex-col gap-1">
+                <li><a class="mobile-nav-link" data-nav-link href="#accueil">Accueil</a></li>
+                <li><a class="mobile-nav-link" data-nav-link href="#services">Services</a></li>
+                <li><a class="mobile-nav-link" data-nav-link href="#realisations">Réalisations</a></li>
+                <li><a class="mobile-nav-link" data-nav-link href="#processus">Processus</a></li>
+                <li><a class="mobile-nav-link" data-nav-link href="#a-propos">À propos</a></li>
+                <li><a class="mobile-nav-link" data-nav-link href="#faq">FAQ</a></li>
+                <li class="pt-3"><a class="button-primary w-full" href="#contact">Me contacter</a></li>
+            </ul>
         </div>
     </header>
 
+    <main id="contenu">
+        <section id="accueil" data-section class="scroll-mt-24 overflow-hidden pt-20">
+            <div class="section-shell grid min-h-[calc(100svh-5rem)] items-center gap-14 py-16 lg:grid-cols-[1.12fr_0.88fr] lg:py-20">
+                <div class="max-w-3xl">
+                    <p class="eyebrow hero-enter">Création de sites web · RDC</p>
+                    <h1 class="hero-enter hero-delay-1 mt-5 max-w-4xl font-heading text-4xl font-bold leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
+                        Un site professionnel pour
+                        <span class="text-jorka-light">développer votre présence en ligne.</span>
+                    </h1>
+                    <p class="hero-enter hero-delay-2 mt-6 max-w-2xl text-base leading-7 text-jorka-muted sm:text-lg sm:leading-8">
+                        JorkaDev crée des sites modernes, rapides et faciles à utiliser pour les entreprises et organisations en RDC.
+                    </p>
 
+                    <div class="hero-enter hero-delay-3 mt-8 flex flex-col gap-3 sm:flex-row">
+                        <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+                           target="_blank" rel="noopener noreferrer" class="button-primary">
+                            Écrire sur WhatsApp
+                        </a>
+                        <a href="#realisations" class="button-secondary">Voir mes réalisations</a>
+                    </div>
 
-    <main class="relative z-10">
-        <!-- Hero section -->
-        <section class="hero min-h-[calc(100vh-64px)] relative flex items-center justify-center overflow-hidden py-10">
-            <div class="hero-content text-center max-w-4xl px-4 flex flex-col items-center">
-
-                <!-- Badge anime -->
-                <div
-                    class="reveal inline-flex items-center gap-2 badge badge-primary badge-outline rounded-full px-3 py-3 mb-8 bg-primary/10">
-                    <span class="w-2 h-2 rounded-full bg-primary relative flex">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                    </span>
-                    <span class="text-[10px] font-bold tracking-widest uppercase">Développeur web · Kinshasa, DRC</span>
+                    <ul class="hero-enter hero-delay-3 mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-300" aria-label="Principaux avantages">
+                        <li class="trust-item">À partir de 100&nbsp;$</li>
+                        <li class="trust-item">Compatible mobile</li>
+                        <li class="trust-item">Domaine + hébergement 1 an</li>
+                    </ul>
                 </div>
 
-                <!-- Titre dynamique avec typewriter -->
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 reveal">
-                    Je construis ce que tu <br>
-                    <span id="typewriter-text" class="text-primary typewriter-cursor inline-block min-w-50"></span>
-                </h1>
-
-                <p class="mb-8 text-lg text-base-content/60 max-w-2xl reveal leading-relaxed"
-                    style="transition-delay: 0.1s;">
-                    Sites web professionnels et applications de gestion sur mesure pour les boutiques, écoles et
-                    entreprises qui veulent exister sérieusement en ligne.
-                </p>
-
-                <div class="flex flex-col gap-4 justify-center w-full sm:w-auto reveal" style="transition-delay: 0.2s;">
-                    <a href="#projets"
-                        class="btn btn-primary font-bold px-8 shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300">
-                        Voir mes projets
-                    </a>
-                    <a href="#contact"
-                        class="btn btn-outline border-base-content/30 text-base-content hover:bg-base-content hover:text-base-100 font-bold px-8 hover:-translate-y-1 transition-all duration-300">
-                        Me contacter
-                    </a>
-                </div>
-
-
-
+                <figure class="hero-enter hero-delay-2 mx-auto w-full max-w-md lg:justify-self-end">
+                    <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-jorka-card p-2 shadow-2xl shadow-black/35">
+                        <img src="./src/profile.png"
+                             alt="Jourdain, développeur web et créateur de JorkaDev"
+                             class="aspect-[4/5] w-full rounded-[1.55rem] object-cover object-center"
+                             width="596" height="896" loading="eager" fetchpriority="high">
+                        <div class="absolute inset-x-5 bottom-5 rounded-2xl border border-white/10 bg-jorka-dark/85 p-4 backdrop-blur-md">
+                            <p class="font-heading font-semibold text-white">Jourdain</p>
+                            <p class="mt-1 text-sm text-slate-300">Développeur web · Créateur de JorkaDev</p>
+                        </div>
+                    </div>
+                    <figcaption class="mt-3 text-center text-xs text-slate-500 lg:text-right">
+                        Un interlocuteur unique du premier échange à la mise en ligne.
+                    </figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- About section -->
-        <section id="about" class="py-24 px-4 max-w-6xl mx-auto scroll-mt-20">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <section id="services" data-section class="scroll-mt-24 border-y border-white/[0.06] bg-jorka-surface py-24">
+            <div class="section-shell">
+                <header class="mx-auto max-w-3xl text-center" data-reveal>
+                    <p class="eyebrow">Services et tarifs</p>
+                    <h2 class="section-title">Choisissez une solution adaptée à votre activité</h2>
+                    <p class="section-intro mx-auto">
+                        Chaque offre vise un objectif simple : expliquer clairement ce que vous faites et donner à vos visiteurs un moyen direct de vous contacter.
+                    </p>
+                </header>
 
-                <!-- Colonne gauche : logo flottant -->
-                <div class="lg:col-span-5 flex justify-center reveal-left">
-                    <div class="relative group">
-                        <div
-                            class="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-2xl blur opacity-30 group-hover:opacity-55 transition duration-1000 group-hover:duration-200">
+                <div class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
+                    <article class="offer-card" data-reveal>
+                        <div>
+                            <p class="offer-number">01</p>
+                            <p class="offer-label">Pour présenter une offre précise</p>
+                            <h3 class="offer-title">Landing page</h3>
+                            <p class="offer-price">À partir de 100&nbsp;$</p>
+                            <p class="offer-description">Une page unique, claire et persuasive pour une activité, un service, une campagne ou un événement.</p>
+                            <ul class="offer-list">
+                                <li>Page responsive personnalisée</li>
+                                <li>Sections Accueil, Services, À propos et Contact</li>
+                                <li>Bouton WhatsApp ou appel direct</li>
+                                <li>SEO technique de base</li>
+                                <li>Domaine et hébergement inclus pendant 1 an</li>
+                                <li>Délai indicatif : 5 à 7 jours ouvrés</li>
+                            </ul>
                         </div>
-                        <div
-                            class="relative card bg-base-200 border border-base-300 shadow-xl p-8 max-w-[340px] items-center text-center">
-                            <div
-                                class="w-32 h-32 rounded-3xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-2xl relative overflow-hidden group-hover:rotate-6 transition-transform duration-500">
-                                <span class="text-primary-content text-5xl font-black logo select-none">J</span>
-                            </div>
-                            <h3 class="text-xl font-bold logo mt-6 tracking-wide">JORKA.DEV</h3>
-                            <p class="text-xs text-base-content/60 mt-1 uppercase tracking-widest font-bold">Kinshasa
-                                Tech Force</p>
-                            <div class="divider my-2"></div>
-                            <div class="flex gap-3">
-                                <span class="badge badge-outline badge-primary">Freelance</span>
-                                <span class="badge badge-outline badge-success">Disponible</span>
-                            </div>
+                        <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%E2%80%99offre%20Landing%20Page."
+                           target="_blank" rel="noopener noreferrer" class="button-secondary mt-8 w-full">Choisir cette offre</a>
+                    </article>
+
+                    <article class="offer-card offer-card-featured" data-reveal data-reveal-delay="100">
+                        <div>
+                            <p class="mb-5 inline-flex rounded-full bg-jorka-blue/15 px-3 py-1 text-xs font-semibold text-jorka-light">Offre recommandée</p>
+                            <p class="offer-number">02</p>
+                            <p class="offer-label">Pour présenter toute une entreprise</p>
+                            <h3 class="offer-title">Site vitrine multipage</h3>
+                            <p class="offer-price">À partir de 180&nbsp;$</p>
+                            <p class="offer-description">Une présence plus complète et structurée pour vos services, votre histoire, vos réalisations et vos contacts.</p>
+                            <ul class="offer-list">
+                                <li>Jusqu’à 5 pages selon le besoin</li>
+                                <li>Design responsive personnalisé</li>
+                                <li>SEO de base sur chaque page</li>
+                                <li>Formulaire de contact fonctionnel</li>
+                                <li>Domaine et hébergement inclus pendant 1 an</li>
+                                <li>Délai indicatif : 10 à 15 jours ouvrés</li>
+                            </ul>
                         </div>
-                    </div>
+                        <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%E2%80%99offre%20Site%20Vitrine%20Multipage."
+                           target="_blank" rel="noopener noreferrer" class="button-primary mt-8 w-full">Parler de mon site</a>
+                    </article>
+
+                    <article class="offer-card" data-reveal data-reveal-delay="200">
+                        <div>
+                            <p class="offer-number">03</p>
+                            <p class="offer-label">Pour un besoin spécifique</p>
+                            <h3 class="offer-title">Projet personnalisé</h3>
+                            <p class="offer-price">Sur devis</p>
+                            <p class="offer-description">Une solution pensée autour de fonctionnalités, d’intégrations ou d’une structure particulières.</p>
+                            <ul class="offer-list">
+                                <li>Analyse détaillée du besoin</li>
+                                <li>Refonte de site existant</li>
+                                <li>Catalogue, réservation ou blog</li>
+                                <li>Intégrations sur mesure</li>
+                                <li>Planning et hébergement adaptés au projet</li>
+                                <li>Devis clair avant le démarrage</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20d%E2%80%99un%20projet%20web%20personnalis%C3%A9."
+                           target="_blank" rel="noopener noreferrer" class="button-secondary mt-8 w-full">Demander un devis</a>
+                    </article>
                 </div>
 
-                <!-- Colonne droite : texte -->
-                <div class="lg:col-span-7 flex flex-col gap-6 reveal-right">
+                <details class="conditions-panel mt-8" data-reveal>
+                    <summary>Voir les conditions essentielles</summary>
+                    <div class="mt-6 grid gap-4 text-sm leading-6 text-slate-300 md:grid-cols-2">
+                        <p><strong class="text-white">Paiement :</strong> 50&nbsp;% d’acompte au démarrage, puis le solde avant la mise en ligne définitive.</p>
+                        <p><strong class="text-white">Révisions :</strong> deux séries de retouches sur le design ou le contenu sont incluses.</p>
+                        <p><strong class="text-white">Contenu :</strong> les textes, photos et logos sont fournis par le client, sauf option prévue au devis.</p>
+                        <p><strong class="text-white">Propriété :</strong> les livrables prévus sont remis au client après le paiement complet.</p>
+                        <p><strong class="text-white">Support :</strong> 15 jours de correction des anomalies liées à la livraison initiale.</p>
+                        <p><strong class="text-white">Renouvellement :</strong> à partir de la deuxième année, le domaine et l’hébergement restent à la charge du client.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section id="benefices" class="py-24">
+            <div class="section-shell">
+                <header class="max-w-3xl" data-reveal>
+                    <p class="eyebrow">Bénéfices concrets</p>
+                    <h2 class="section-title">Ce que votre site doit réellement apporter</h2>
+                    <p class="section-intro">Un bon site ne sert pas seulement à faire joli. Il doit rassurer, informer rapidement et guider le visiteur vers une action utile.</p>
+                </header>
+
+                <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="benefit-card" data-reveal>
+                        <span class="benefit-index">01</span>
+                        <h3>Une identité crédible</h3>
+                        <p>Un design cohérent avec votre activité pour inspirer confiance dès les premières secondes.</p>
+                    </article>
+                    <article class="benefit-card" data-reveal data-reveal-delay="80">
+                        <span class="benefit-index">02</span>
+                        <h3>Une expérience mobile claire</h3>
+                        <p>Une interface adaptée aux téléphones, tablettes et ordinateurs, sans perte d’information.</p>
+                    </article>
+                    <article class="benefit-card" data-reveal data-reveal-delay="160">
+                        <span class="benefit-index">03</span>
+                        <h3>Un chargement rapide</h3>
+                        <p>Une structure légère pour réduire l’attente et conserver l’attention de vos visiteurs.</p>
+                    </article>
+                    <article class="benefit-card" data-reveal>
+                        <span class="benefit-index">04</span>
+                        <h3>Un contact sans friction</h3>
+                        <p>Des appels à l’action visibles vers WhatsApp, le téléphone ou l’e-mail.</p>
+                    </article>
+                    <article class="benefit-card" data-reveal data-reveal-delay="80">
+                        <span class="benefit-index">05</span>
+                        <h3>Une lecture sans effort</h3>
+                        <p>Vos informations importantes sont organisées pour être comprises en un coup d’œil.</p>
+                    </article>
+                    <article class="benefit-card" data-reveal data-reveal-delay="160">
+                        <span class="benefit-index">06</span>
+                        <h3>De bonnes bases SEO</h3>
+                        <p>Titres, métadonnées, structure sémantique et performance préparés pour l’indexation.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="realisations" data-section class="scroll-mt-24 border-y border-white/[0.06] bg-jorka-surface py-24">
+            <div class="section-shell">
+                <header class="mx-auto max-w-3xl text-center" data-reveal>
+                    <p class="eyebrow">Réalisations</p>
+                    <h2 class="section-title">Des projets concrets, pas seulement des promesses</h2>
+                    <p class="section-intro mx-auto">Quelques projets réalisés ou conçus pour démontrer mon approche de la conception et du développement web.</p>
+                </header>
+
+                <div class="mt-12 grid gap-6 lg:grid-cols-3">
+                    <article class="project-card" data-reveal>
+                        <div class="project-visual">
+                            <img data-project-image src="./src/images/projects/gscom.png" alt="Aperçu du site institutionnel G.SCO.M" loading="lazy">
+                            <div data-project-fallback class="project-fallback" hidden>
+                                <span>Site institutionnel</span>
+                                <strong>G.SCO.M</strong>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="project-type">Établissement scolaire</p>
+                            <h3>G.SCO.M — Site institutionnel</h3>
+                            <p>Présentation de l’établissement, de ses formations, de son équipe et des informations utiles aux parents et aux élèves.</p>
+                            <a href="#contact" class="text-link">Demander un projet similaire</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-reveal data-reveal-delay="100">
+                        <div class="project-visual">
+                            <img data-project-image src="./src/images/projects/socotem.png" alt="Aperçu du site vitrine SOCOTEM" loading="lazy">
+                            <div data-project-fallback class="project-fallback" hidden>
+                                <span>Site vitrine</span>
+                                <strong>SOCOTEM</strong>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="project-type">Réseau professionnel</p>
+                            <h3>SOCOTEM — Site vitrine</h3>
+                            <p>Une plateforme moderne pour présenter les services, les formations et les activités d’un réseau de techniciens.</p>
+                            <a href="#etude-de-cas" class="text-link">Lire l’étude de cas</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-reveal data-reveal-delay="200">
+                        <div class="project-visual">
+                            <img data-project-image src="./src/images/projects/piskas-holding.png" alt="Aperçu du site de Piskas Holding" loading="lazy">
+                            <div data-project-fallback class="project-fallback" hidden>
+                                <span>Site d’entreprise</span>
+                                <strong>Piskas Holding</strong>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="project-type">Entreprise</p>
+                            <h3>Piskas Holding — Site complet</h3>
+                            <p>Une présentation structurée des activités, des services, des offres et des moyens de contacter directement l’entreprise.</p>
+                            <a href="#contact" class="text-link">Demander un projet similaire</a>
+                        </div>
+                    </article>
+                </div>
+
+                <article id="etude-de-cas" class="case-study mt-12" data-reveal>
                     <div>
-                        <p class="text-xs tracking-widest mb-2 font-bold text-primary">À PROPOS DE MOI</p>
-                        <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-base-content/80">
-                            Un développeur de Kinshasa qui construit pour toi.
-                        </h2>
-                        <div class="w-16 h-1.5 bg-primary rounded-full mt-4"></div>
+                        <p class="eyebrow">Étude de cas · SOCOTEM</p>
+                        <h3 class="mt-4 font-heading text-2xl font-semibold text-white sm:text-3xl">Transformer une présence dispersée en une présentation claire</h3>
                     </div>
-
-                    <p class="text-base-content/70 text-lg leading-relaxed">
-                        Je m'appelle Jorka — développeur web freelance basé à Kinshasa. Je crée des sites web modernes,
-                        rapides et sur mesure pour les entreprises congolaises qui veulent une présence en ligne qui
-                        inspire vraiment confiance.
-                    </p>
-                    <p class="text-base-content/70 text-lg leading-relaxed">
-                        Je ne livre pas juste un site. Je prends le temps de comprendre ton activité, tes clients et tes
-                        objectifs — pour construire quelque chose qui fonctionne vraiment pour toi.
-                    </p>
-
-                    <div class="flex flex-col gap-3">
-                        <p class="text-xs uppercase font-bold tracking-wider text-base-content/60">Ma stack favorite :
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">HTML</span>
-                            <span
-                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">CSS</span>
-                            <span
-                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">JavaScript</span>
-                            <span
-                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Tailwind
-                                CSS</span>
-                            <span
-                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">DaisyUI</span>
-                            <span
-                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Django</span>
-                            <span
-                                class="badge badge-lg bg-base-200 border-none hover:badge-primary transition-all cursor-default font-semibold shadow-sm">Python</span>
+                    <div class="grid gap-6 md:grid-cols-3">
+                        <div>
+                            <p class="case-label">Le problème</p>
+                            <p>Les informations étaient réparties entre plusieurs canaux, sans présentation centrale et facile à consulter.</p>
+                        </div>
+                        <div>
+                            <p class="case-label">La solution</p>
+                            <p>Un site vitrine structuré autour des services, des formations, des activités et d’un contact direct.</p>
+                        </div>
+                        <div>
+                            <p class="case-label">Le résultat</p>
+                            <p>Une présence plus cohérente, plus professionnelle et plus simple à comprendre pour les visiteurs.</p>
                         </div>
                     </div>
-                </div>
-
+                </article>
             </div>
         </section>
 
-        <!-- Services section -->
-        <section id="services" class="py-24 px-4 bg-base-200/50 relative overflow-hidden scroll-mt-20">
-            <div class="max-w-6xl mx-auto flex flex-col items-center relative z-10">
+        <section id="processus" data-section class="scroll-mt-24 py-24">
+            <div class="section-shell grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+                <header class="lg:sticky lg:top-28 lg:self-start" data-reveal="left">
+                    <p class="eyebrow">Processus</p>
+                    <h2 class="section-title">De l’idée à la mise en ligne</h2>
+                    <p class="section-intro">Vous savez à chaque étape ce qui est en cours, ce qui doit être validé et ce qui vient ensuite.</p>
+                    <a href="#contact" class="button-secondary mt-7">Présenter mon projet</a>
+                </header>
 
-                <p class="py-4 text-xs tracking-widest mb-2 reveal font-bold text-primary">SERVICES</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal text-base-content/80">Ce que je
-                    construis pour toi</h2>
-                <div class="w-16 h-1.5 bg-primary rounded-full mb-6 reveal"></div>
-                <p class="mb-16 text-center text-base-content/70 max-w-2xl text-lg reveal">Je propose une gamme complète
-                    de services pour répondre à tous tes besoins en ligne.</p>
+                <ol class="process-list">
+                    <li data-reveal>
+                        <span>01</span>
+                        <div><h3>Découverte</h3><p>Nous échangeons sur votre activité, vos clients, vos objectifs et les informations disponibles.</p></div>
+                    </li>
+                    <li data-reveal>
+                        <span>02</span>
+                        <div><h3>Structure et contenu</h3><p>Je définis les pages, la hiérarchie des informations et les actions attendues du visiteur.</p></div>
+                    </li>
+                    <li data-reveal>
+                        <span>03</span>
+                        <div><h3>Conception et développement</h3><p>Le design devient un site fonctionnel, responsive et cohérent avec votre identité.</p></div>
+                    </li>
+                    <li data-reveal>
+                        <span>04</span>
+                        <div><h3>Vérification et optimisation</h3><p>Je contrôle l’affichage, les liens, les performances, l’accessibilité et les bases du SEO.</p></div>
+                    </li>
+                    <li data-reveal>
+                        <span>05</span>
+                        <div><h3>Mise en ligne</h3><p>Le site est publié, vérifié et vous recevez les accès et explications prévus.</p></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <section id="a-propos" data-section class="scroll-mt-24 border-y border-white/[0.06] bg-jorka-surface py-24">
+            <div class="section-shell grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
+                <figure data-reveal="left" class="mx-auto w-full max-w-md">
+                    <img src="./src/profile.png" alt="Portrait de Jourdain, créateur de JorkaDev" class="aspect-[4/5] w-full rounded-[2rem] border border-white/10 object-cover object-center" width="596" height="896" loading="lazy">
+                </figure>
 
-                    <!-- Card 1 -->
-                    <div
-                        class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300">
-                        <div class="card-body items-center text-center tilt-card-inner">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12 19h8" />
-                                    <path d="m4 17 6-6-6-6" />
-                                </svg>
-                            </div>
-                            <h3 class="card-title text-xl">Développement Web</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Création de sites web modernes,
-                                responsives et performants pour entreprises, associations et particuliers.</p>
-                        </div>
+                <div data-reveal="right">
+                    <p class="eyebrow">Qui suis-je ?</p>
+                    <h2 class="section-title">Derrière JorkaDev, il y a une personne</h2>
+                    <div class="mt-6 space-y-4 text-base leading-7 text-jorka-muted">
+                        <p>Je suis Jourdain, développeur web et créateur de JorkaDev, basé en République démocratique du Congo.</p>
+                        <p>J’accompagne les entreprises, écoles, associations et entrepreneurs qui veulent une présence en ligne claire, professionnelle et adaptée à leur réalité.</p>
+                        <p>Mon approche est directe : comprendre l’activité avant de construire, expliquer les choix sans jargon inutile et rester votre interlocuteur pendant tout le projet.</p>
                     </div>
+                    <blockquote class="mt-8 border-l-4 border-jorka-blue bg-jorka-dark/55 px-6 py-5 font-heading text-lg font-semibold leading-7 text-white">
+                        « Un bon produit numérique ne doit pas seulement être moderne. Il doit surtout être utile. »
+                    </blockquote>
 
-                    <!-- Card 2 -->
-                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300"
-                        style="transition-delay: 0.1s;">
-                        <div class="card-body items-center text-center tilt-card-inner">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <ellipse cx="12" cy="5" rx="9" ry="3" />
-                                    <path d="M3 5V19A9 3 0 0 0 21 19V5" />
-                                    <path d="M3 12A9 3 0 0 0 21 12" />
-                                </svg>
-                            </div>
-                            <h3 class="card-title text-xl">Applications de gestion</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Conception de solutions sur mesure
-                                pour la gestion des écoles, commerces, stocks et activités administratives.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300"
-                        style="transition-delay: 0.2s;">
-                        <div class="card-body items-center text-center tilt-card-inner">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" />
-                                    <path
-                                        d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" />
-                                    <path d="m2.3 2.3 7.286 7.286" />
-                                    <circle cx="11" cy="11" r="2" />
-                                </svg>
-                            </div>
-                            <h3 class="card-title text-xl">UI/UX Design</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Création d'interfaces intuitives,
-                                esthétiques et parfaitement adaptées aux besoins de tes utilisateurs finaux.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="card bg-base-100 hover:shadow-2xl border border-base-300 hover:border-primary/30 tilt-card reveal group cursor-default transition-all duration-300"
-                        style="transition-delay: 0.3s;">
-                        <div class="card-body items-center text-center tilt-card-inner">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-primary-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
-                                    <path d="M20 2v4" />
-                                    <path d="M22 4h-4" />
-                                    <circle cx="4" cy="20" r="2" />
-                                </svg>
-                            </div>
-                            <h3 class="card-title text-xl">Automatisation & IA</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Mise en place de flux de travail
-                                automatisés, chatbots d'assistance intelligente et connexions API complexes.</p>
-                        </div>
-                    </div>
-
+                    <dl class="mt-8 grid gap-4 sm:grid-cols-3">
+                        <div class="about-fact"><dt>Base</dt><dd>Kinshasa, RDC</dd></div>
+                        <div class="about-fact"><dt>Échanges</dt><dd>Directs et humains</dd></div>
+                        <div class="about-fact"><dt>Priorité</dt><dd>Clarté et utilité</dd></div>
+                    </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Projets section -->
-        <section id="projets" class="py-24 px-4 max-w-6xl mx-auto scroll-mt-20">
-            <div class="flex flex-col items-center">
-                <p class="py-4 text-xs tracking-widest mb-2 reveal font-bold text-primary">PROJETS</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal">Ce que j'ai déjà construit</h2>
-                <div class="w-16 h-1.5 bg-primary rounded-full mb-12 reveal"></div>
+        <section id="faq" data-section class="scroll-mt-24 py-24">
+            <div class="section-shell grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
+                <header data-reveal="left">
+                    <p class="eyebrow">Questions fréquentes</p>
+                    <h2 class="section-title">Les réponses avant de commencer</h2>
+                    <p class="section-intro">Si votre question n’apparaît pas ici, envoyez-la directement sur WhatsApp.</p>
+                    <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20j%E2%80%99ai%20une%20question%20concernant%20la%20cr%C3%A9ation%20de%20mon%20site."
+                       target="_blank" rel="noopener noreferrer" class="text-link mt-6">Poser une question</a>
+                </header>
 
-                <!-- Grille de projets -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-
-                    <!-- Projet 1 : G.SCO.M -->
-                    <div
-                        class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal">
-                        <figure class="relative h-48 overflow-hidden">
-                            <img src="./src/Capture d'écran_20260621_230934.png" alt="Aperçu du site web G.SCO.M"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute top-3 left-3">
-                                <span class="badge badge-primary font-bold shadow">Web</span>
-                            </div>
-                        </figure>
-                        <div class="card-body">
-                            <h3 class="card-title text-xl">G.SCO.M</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Site web complet pour une école de
-                                Kinshasa — présentation de l'établissement, équipe, témoignages et contact.</p>
-                            <div class="card-actions justify-between items-center mt-2">
-                                <div class="flex gap-1.5">
-                                    <span class="badge badge-sm badge-ghost">HTML</span>
-                                    <span class="badge badge-sm badge-ghost">CSS</span>
-                                    <span class="badge badge-sm badge-ghost">JAVASCRIPT</span>
-                                </div>
-                                <a class="link link-primary font-bold inline-flex items-center gap-1 hover:gap-2 transition-all"
-                                    href="#">
-                                    Voir <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M5 12h14" />
-                                        <path d="m12 5 7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projet 2 : Chatbot WhatsApp -->
-                    <!--  <div class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal" style="transition-delay: 0.1s;">
-                        <figure class="relative h-48 overflow-hidden">
-                            <img src="https://imgs.search.brave.com/PPGA7DB0n7PA_gaivNAuERjq7hDzAWaRzfxTC76HDvI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTky/MzY3MTI2Ny9waG90/by9jaGF0Ym90LWNv/bmNlcHQtb3Blbi1h/aS1hcnRpZmljaWFs/LWludGVsbGlnZW5j/ZS1idXNpbmVzc21h/bi11c2luZy10ZWNo/bm9sb2d5LXNtYXJ0/LXJvYm90LWFpLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1R/Y0JSZV9hMGdlcHNQ/eTlxQl9TQWJEX3NQ/eXpWRVdBY1JLNzFf/VWZWYndvPQ" alt="Illustration d'un chatbot WhatsApp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute top-3 left-3">
-                                <span class="badge badge-secondary font-bold shadow">Automation</span>
-                            </div>
-                        </figure>
-                        <div class="card-body">
-                            <h3 class="card-title text-xl">Chatbot WhatsApp</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Un chatbot intégré à WhatsApp pour une entreprise de services à Kinshasa, permettant une communication automatisée.</p>
-                            <div class="card-actions justify-between items-center mt-2">
-                                <div class="flex gap-1.5">
-                                    <span class="badge badge-sm badge-ghost">Python</span>
-                                    <span class="badge badge-sm badge-ghost">n8n</span>
-                                </div>
-                                <a class="link link-primary font-bold inline-flex items-center gap-1 hover:gap-2 transition-all" href="#">
-                                    Voir <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                -->
-                    <!-- Projet 3 : Jorka.Dev -->
-                    <div class="card bg-base-200 shadow-xl overflow-hidden border border-base-300 group hover:-translate-y-2 transition-all duration-300 reveal"
-                        style="transition-delay: 0.2s;">
-                        <figure class="relative h-48 overflow-hidden">
-                            <img src="./src/jorkadev.png">
-                            <div class="absolute top-3 left-3">
-                                <span class="badge badge-accent font-bold shadow">Web</span>
-                            </div>
-                        </figure>
-                        <div class="card-body">
-                            <h3 class="card-title text-xl">Jorka.Dev</h3>
-                            <p class="text-base-content/70 text-sm leading-relaxed">Design et développement complet de
-                                mon portfolio — charte graphique fluide, animations immersives et UX/UI soignée.</p>
-                            <div class="card-actions justify-between items-center mt-2">
-                                <div class="flex gap-1.5">
-                                    <span class="badge badge-sm badge-ghost">HTML</span>
-                                    <span class="badge badge-sm badge-ghost">DaisyUI</span>
-                                </div>
-                                <span class="text-success text-sm font-bold flex items-center gap-1">
-                                    Tu es dessus 😄
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- CTA centralise -->
-                <div class="mt-12 reveal">
-                    <button onclick="document.getElementById('contact').scrollIntoView();"
-                        class="btn btn-outline btn-wide font-bold hover:scale-105 active:scale-95 transition-all">
-                        Démarrer un projet personnalisé
-                    </button>
+                <div class="space-y-3" data-accordion data-reveal="right">
+                    <details class="faq-item" open>
+                        <summary>Que comprend le prix affiché ?</summary>
+                        <p>Le prix comprend les éléments indiqués dans l’offre choisie, le design responsive, l’optimisation de base et la mise en ligne. Le périmètre exact est confirmé dans le devis avant le démarrage.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Combien de temps faut-il pour créer un site ?</summary>
+                        <p>Une landing page demande généralement 5 à 7 jours ouvrés. Un site vitrine multipage demande généralement 10 à 15 jours ouvrés après réception de tous les contenus nécessaires.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Le site fonctionnera-t-il sur téléphone ?</summary>
+                        <p>Oui. Chaque site est conçu pour s’adapter aux téléphones, tablettes et ordinateurs.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Dois-je être à Kinshasa pour travailler avec JorkaDev ?</summary>
+                        <p>Non. Le brief, les échanges, les validations et la livraison peuvent se faire à distance par WhatsApp et par e-mail, partout en RDC.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Le site apparaîtra-t-il immédiatement sur Google ?</summary>
+                        <p>Le site reçoit de bonnes fondations techniques et une optimisation SEO de base. Son indexation et son positionnement évoluent ensuite selon le contenu, la concurrence et le temps.</p>
+                    </details>
                 </div>
             </div>
         </section>
 
-        <!-- Contact section -->
-        <section id="contact" class="py-24 px-4 bg-base-200/50 relative overflow-hidden scroll-mt-20">
-            <div class="max-w-6xl mx-auto flex flex-col items-center relative z-10">
-                <p class="text-xs tracking-widest mb-2 reveal font-extrabold text-primary">CONTACT</p>
-                <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 reveal">On construit quelque chose ensemble ?
-                </h2>
-                <div class="w-16 h-1.5 bg-primary rounded-full mb-6 reveal"></div>
-                <p class="mb-12 text-center text-base-content/70 max-w-2xl text-lg reveal">Dis-moi ce que tu as en tête.
-                    Je réponds généralement sous moins de 24h.</p>
-
-                <!-- Carte du formulaire -->
-                <div
-                    class="card bg-base-100 shadow-2xl w-full max-w-xl border border-base-300 relative overflow-hidden reveal">
-                    <div
-                        class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none">
-                    </div>
-                    <div
-                        class="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl pointer-events-none">
-                    </div>
-
-                    <div class="card-body p-8 sm:p-10 relative z-10" id="contact-form-container">
-                        <h3 class="text-2xl font-bold mb-1 text-center sm:text-left">Parle-moi de ton projet</h3>
-                        <p class="mb-6 text-base-content/70 text-sm text-center sm:text-left">Que tu aies une idée
-                            précise ou juste une envie d'échanger, écris-moi !</p>
-
-                        <form id="portfolio-contact-form" class="flex flex-col gap-4">
-
-                            <label class="form-control">
-                                <div class="label"><span
-                                        class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Ton
-                                        nom</span></div>
-                                <input type="text" id="contact-name" name="name" placeholder="Ex: Jorka Dev"
-                                    class="input input-bordered w-full focus:border-primary transition-all duration-300"
-                                    required>
-                            </label>
-
-                            <label class="form-control">
-                                <div class="label"><span
-                                        class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Ton
-                                        email ou WhatsApp</span></div>
-                                <input type="text" id="contact-email" name="email"
-                                    placeholder="Ex: jorka@gmail.com ou +243..."
-                                    class="input input-bordered w-full focus:border-primary transition-all duration-300"
-                                    required>
-                            </label>
-
-                            <label class="form-control">
-                                <div class="label"><span
-                                        class="label-text text-xs tracking-widest uppercase text-base-content/60 font-bold">Détails
-                                        du projet</span></div>
-                                <textarea id="contact-message" name="message"
-                                    placeholder="Dis-moi ce que tu veux construire..."
-                                    class="textarea textarea-bordered w-full min-h-[120px] focus:border-primary transition-all duration-300"
-                                    required></textarea>
-                            </label>
-
-                            <button type="submit" id="submit-btn"
-                                class="btn btn-gradient bg-primary w-full mt-2 font-bold shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300">
-                                Envoyer le message
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- Etat succes anime -->
-                    <div id="success-message-container" style="display: none;"
-                        class="absolute inset-0 bg-base-100 flex-col items-center justify-center p-10 text-center z-20">
-                        <div class="w-20 h-20 rounded-full bg-success/10 text-success flex items-center justify-center mb-6 scale-0 transition-all duration-500 ease-out"
-                            id="success-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M20 6 9 17l-5-5" />
-                            </svg>
-                        </div>
-                        <h3 class="text-3xl font-bold mb-2 text-success">Message envoyé !</h3>
-                        <p class="text-base-content/70 max-w-sm mb-8">Merci pour ta confiance. Je vais analyser tes
-                            besoins et revenir vers toi sous moins de 24h.</p>
-                        <button onclick="resetContactForm();" class="btn btn-ghost btn-sm text-primary font-bold">
-                            Envoyer un autre message
-                        </button>
-                    </div>
-
+        <section id="contact" data-section class="scroll-mt-24 px-5 pb-24 sm:px-6 lg:px-8">
+            <div class="contact-panel mx-auto max-w-6xl" data-reveal>
+                <div class="max-w-3xl">
+                    <p class="eyebrow">Votre présence en ligne commence ici</p>
+                    <h2 class="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">Parlons de votre projet web</h2>
+                    <p class="mt-5 max-w-2xl text-base leading-7 text-jorka-muted">Présentez votre activité, le type de site souhaité et votre objectif. Je vous répondrai personnellement pour définir la prochaine étape.</p>
                 </div>
+
+                <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+                       target="_blank" rel="noopener noreferrer" class="button-primary">WhatsApp : +243 808 981 347</a>
+                    <a href="mailto:jorkaskj@proton.me?subject=Projet%20web%20avec%20JorkaDev" class="button-secondary">Envoyer un e-mail</a>
+                </div>
+
+                <address class="mt-8 grid gap-4 border-t border-white/10 pt-6 text-sm not-italic text-slate-300 sm:grid-cols-3">
+                    <p><span class="block text-slate-500">E-mail</span><a class="mt-1 inline-block hover:text-jorka-light" href="mailto:jorkaskj@proton.me">jorkaskj@proton.me</a></p>
+                    <p><span class="block text-slate-500">Facebook</span><a class="mt-1 inline-block hover:text-jorka-light" href="https://www.facebook.com/jorkadev" target="_blank" rel="noopener noreferrer">@jorkadev</a></p>
+                    <p><span class="block text-slate-500">Zone de service</span><span class="mt-1 inline-block">Kinshasa et partout en RDC</span></p>
+                </address>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer footer-center p-12 bg-base-200 text-base-content border-t border-base-300 relative z-10">
-        <div class="flex flex-col items-center gap-4">
-            <div class="flex items-center gap-2">
-
-                <p class="text-xl font-bold logo tracking-wider">JORKA<span class="text-primary">.DEV</span></p>
-            </div>
-            <p class="text-base-content/70 text-sm max-w-sm leading-relaxed">Je donne vie à tes visions numériques. Du
-                sur-mesure d'excellence pour valoriser ton identité.</p>
-
-            <nav class="md:place-self-center md:justify-self-end">
-                <div class="grid grid-flow-col gap-4">
-                    <a href="https://github.com/Jordan-Skj">
-                        <svg aria-label="GitHub logo" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24">
-                            <path fill="white"
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z">
-                            </path>
-                        </svg>
-
-                    </a>
-                    <a href="https://api.whatsapp.com/message/XDNKI4U5LIDOO1?autoload=1&app_absent=0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            class="fill-current">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z" />
-                        </svg>
-
-                    </a>
-                    <a href="https://www.facebook.com/jordan.shongo.2025">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            class="fill-current">
-                            <path
-                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
-                            </path>
-                        </svg>
-                    </a>
+    <footer class="border-t border-white/[0.06] bg-jorka-surface px-5 py-12 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+            <div class="grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr]">
+                <div>
+                    <a href="#accueil" class="font-heading text-2xl font-bold text-white">Jorka<span class="text-jorka-blue">Dev</span></a>
+                    <p class="mt-4 max-w-sm text-sm leading-6 text-jorka-muted">Le web, pensé pour votre entreprise. Des sites clairs, modernes et utiles pour mieux présenter votre activité.</p>
                 </div>
-            </nav>
-            <div class="w-16 h-px bg-base-300"></div>
-            <p class="text-base-content/50 text-xs">© 2026 JORKA.DEV. Tous droits réservés.</p>
+                <nav aria-label="Navigation du pied de page">
+                    <h2 class="font-heading font-semibold text-white">Navigation</h2>
+                    <ul class="mt-4 space-y-2 text-sm text-jorka-muted">
+                        <li><a class="hover:text-jorka-light" href="#services">Services</a></li>
+                        <li><a class="hover:text-jorka-light" href="#realisations">Réalisations</a></li>
+                        <li><a class="hover:text-jorka-light" href="#processus">Processus</a></li>
+                        <li><a class="hover:text-jorka-light" href="#a-propos">À propos</a></li>
+                        <li><a class="hover:text-jorka-light" href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <h2 class="font-heading font-semibold text-white">Contact</h2>
+                    <ul class="mt-4 space-y-2 text-sm text-jorka-muted">
+                        <li><a class="hover:text-jorka-light" href="tel:+243808981347">+243 808 981 347</a></li>
+                        <li><a class="hover:text-jorka-light" href="mailto:jorkaskj@proton.me">jorkaskj@proton.me</a></li>
+                        <li><a class="hover:text-jorka-light" href="https://www.facebook.com/jorkadev" target="_blank" rel="noopener noreferrer">Facebook : @jorkadev</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 flex flex-col gap-2 border-t border-white/[0.06] pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+                <p>© <span data-current-year>2026</span> JorkaDev. Tous droits réservés.</p>
+                <p>Conçu et développé par Jourdain.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+       target="_blank" rel="noopener noreferrer" class="floating-contact" aria-label="Contacter JorkaDev sur WhatsApp">
+        WhatsApp
+    </a>
 
-            
-
-            /* 2. EFFET TYPEWRITER DANS LE HERO */
-            const words = ["imagines.", "rêves.", "veux créer.", "conçois."];
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typewriterElement = document.getElementById('typewriter-text');
-            const typingSpeed = 100;
-            const deletingSpeed = 60;
-            const delayBetweenWords = 2000;
-
-            function typeEffect() {
-                const currentWord = words[wordIndex];
-
-                if (isDeleting) {
-                    typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-
-                let currentDelay = isDeleting ? deletingSpeed : typingSpeed;
-
-                if (!isDeleting && charIndex === currentWord.length) {
-                    currentDelay = delayBetweenWords;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    currentDelay = 500;
-                }
-
-                setTimeout(typeEffect, currentDelay);
-            }
-            setTimeout(typeEffect, 1000);
-
-            /* 3. SCROLL REVEAL (Intersection Observer) */
-            const observerOptions = {
-                root: null,
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        if (entry.target.classList.contains('reveal-left') || entry.target.classList.contains('reveal-right')) {
-                            entry.target.classList.add('reveal-visible-side');
-                        } else {
-                            entry.target.classList.add('reveal-visible');
-                        }
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(element => {
-                revealObserver.observe(element);
-            });
-
-            /* 4. TILT 3D SUR LES CARDS */
-            const tiltCards = document.querySelectorAll('.tilt-card');
-            tiltCards.forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-
-                    const midX = rect.width / 2;
-                    const midY = rect.height / 2;
-
-                    const rotX = ((y - midY) / midY) * -10;
-                    const rotY = ((x - midX) / midX) * 10;
-
-                    card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.03, 1.03, 1.03)`;
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-                });
-            });
-
-            /* 5. FORMULAIRE DE CONTACT AVEC ANIMATION DE SUCCES + ENVOI WHATSAPP */
-            const contactForm = document.getElementById('portfolio-contact-form');
-            const successContainer = document.getElementById('success-message-container');
-            const successIcon = document.getElementById('success-icon');
-            const submitBtn = document.getElementById('submit-btn');
-            const WHATSAPP_NUMBER = "243995659766"; // +243 99 565 9766
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-
-                    // Bloque l'envoi si les champs requis ne sont pas remplis correctement
-                    if (!contactForm.checkValidity()) {
-                        contactForm.reportValidity();
-                        return;
-                    }
-
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = `
-                        <span class="loading loading-spinner loading-sm"></span>
-                        Envoi en cours...
-                    `;
-
-                    // Récupère les valeurs avant le reset du formulaire
-                    const name = document.getElementById('contact-name').value.trim();
-                    const contact = document.getElementById('contact-email').value.trim();
-                    const message = document.getElementById('contact-message').value.trim();
-
-                    setTimeout(() => {
-                        successContainer.style.display = 'flex';
-
-                        setTimeout(() => {
-                            successIcon.classList.remove('scale-0');
-                            successIcon.classList.add('scale-100');
-                        }, 100);
-
-                        // Construit le message WhatsApp pré-rempli et ouvre WhatsApp
-                        const whatsappText =
-                            `Nouveau message depuis Jorka.Dev%0A%0A` +
-                            `*Nom :* ${encodeURIComponent(name)}%0A` +
-                            `*Email / WhatsApp :* ${encodeURIComponent(contact)}%0A%0A` +
-                            `*Projet :*%0A${encodeURIComponent(message)}`;
-
-                        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`;
-                        window.open(whatsappUrl, '_blank');
-
-                        contactForm.reset();
-
-                        submitBtn.disabled = false;
-                        submitBtn.innerText = "Envoyer le message";
-                    }, 1500);
-                });
-            }
-
-            window.resetContactForm = function () {
-                successContainer.style.display = 'none';
-                successIcon.classList.add('scale-0');
-                successIcon.classList.remove('scale-100');
-            }
-
-        });
-    </script>
-
+    <script type="module" src="./src/script.js"></script>
 </body>
-
 </html>

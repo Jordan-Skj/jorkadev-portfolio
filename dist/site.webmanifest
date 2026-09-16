@@ -1,0 +1,10 @@
+{
+  "name": "JorkaDev — Création de sites web",
+  "short_name": "JorkaDev",
+  "description": "Création de sites web professionnels pour les entreprises et organisations en RDC.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070D1F",
+  "theme_color": "#070D1F",
+  "lang": "fr-CD"
+}

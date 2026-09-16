@@ -1,149 +1,472 @@
 @import "tailwindcss";
-@plugin "daisyui";
-@source "../**/*.html";
 
-@plugin "daisyui/theme" {
-  name: "jorkatheme";
-  default: true;
-  color-scheme: dark;
+@source "../index.html";
+@source "./script.js";
 
-  --color-base-100: #070D1F;
-  --color-base-200: #0D1730;
-  --color-base-300: #14213D;
-  --color-base-content: #FFFFFF;
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
 
-  --color-primary: #1E6FFF;
-  --color-primary-content: #FFFFFF;
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter-Medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
 
-  --color-secondary: #8B5CF6;
-  --color-secondary-content: #FFFFFF;
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter-SemiBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
 
-  --color-accent: #10B981;
-  --color-accent-content: #FFFFFF;
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("./fonts/SpaceGrotesk-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
 
-  --color-neutral: #14213D;
-  --color-neutral-content: #FFFFFF;
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("./fonts/SpaceGrotesk-SemiBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
 
-  --color-info: #3ABFF8;
-  --color-success: #36D399;
-  --color-warning: #FBBD23;
-  --color-error: #F87272;
-
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
-  --radius-box: 1rem;
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("./fonts/SpaceGrotesk-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
 }
 
 @theme {
-  --font-display: "Clash Display", sans-serif;
-  --font-sans: "Plus Jakarta Sans", sans-serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+    --color-jorka-dark: #070d1f;
+    --color-jorka-surface: #0c1428;
+    --color-jorka-card: #111d39;
+    --color-jorka-blue: #1e6fff;
+    --color-jorka-light: #4d8fff;
+    --color-jorka-muted: #aab6d0;
 }
 
-body {
-  font-family: var(--font-sans);
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        background: var(--color-jorka-dark);
+        scroll-padding-top: 6rem;
+    }
+
+    body {
+        min-width: 320px;
+        overflow-x: hidden;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    a,
+    button,
+    summary {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    button,
+    summary {
+        cursor: pointer;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    ::selection {
+        background: rgb(30 111 255 / 0.35);
+        color: #ffffff;
+    }
+
+    :focus-visible {
+        outline: 3px solid var(--color-jorka-light);
+        outline-offset: 4px;
+    }
 }
 
-h1, h2, h3, h4, .logo {
-  font-family: var(--font-display);
+@layer components {
+    .section-shell {
+        @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+    }
+
+    .skip-link {
+        @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-white px-4 py-3 text-sm font-semibold text-jorka-dark transition-transform focus:translate-y-0;
+    }
+
+    #navbar {
+        background: rgb(7 13 31 / 0.15);
+    }
+
+    #navbar.nav-scrolled {
+        border-bottom: 1px solid rgb(255 255 255 / 0.08);
+        background: rgb(7 13 31 / 0.88);
+        box-shadow: 0 18px 50px rgb(0 0 0 / 0.18);
+        backdrop-filter: blur(18px);
+    }
+
+    .nav-link {
+        @apply relative py-3 text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white;
+    }
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0.35rem;
+        left: 0;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: center;
+        background: var(--color-jorka-blue);
+        transition: transform 180ms ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.is-active::after {
+        transform: scaleX(1);
+    }
+
+    .nav-link.is-active {
+        @apply text-white;
+    }
+
+    .mobile-nav-link {
+        @apply block rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition-colors hover:bg-white/[0.06] hover:text-white;
+    }
+
+    .mobile-nav-link.is-active {
+        @apply bg-jorka-blue/15 text-jorka-light;
+    }
+
+    .menu-button {
+        @apply inline-flex size-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white transition-colors hover:border-jorka-blue/40 hover:bg-white/[0.08];
+    }
+
+    .button-primary,
+    .button-secondary {
+        @apply inline-flex min-h-12 items-center justify-center rounded-xl px-5 py-3 text-center text-sm font-semibold transition duration-300;
+    }
+
+    .button-primary {
+        @apply bg-jorka-blue text-white shadow-lg shadow-jorka-blue/15 hover:-translate-y-0.5 hover:bg-jorka-light hover:shadow-jorka-blue/25;
+    }
+
+    .button-secondary {
+        @apply border border-white/10 bg-white/[0.05] text-white hover:-translate-y-0.5 hover:border-jorka-blue/40 hover:bg-white/[0.09];
+    }
+
+    .eyebrow {
+        @apply text-xs font-semibold uppercase tracking-[0.18em] text-jorka-light;
+    }
+
+    .section-title {
+        @apply mt-4 font-heading text-3xl font-bold leading-tight tracking-[-0.025em] text-white sm:text-4xl lg:text-[2.65rem];
+    }
+
+    .section-intro {
+        @apply mt-5 max-w-2xl text-sm leading-7 text-jorka-muted sm:text-base;
+    }
+
+    .trust-item {
+        @apply relative pl-4;
+    }
+
+    .trust-item::before {
+        content: "";
+        position: absolute;
+        top: 0.52rem;
+        left: 0;
+        width: 0.38rem;
+        height: 0.38rem;
+        border-radius: 999px;
+        background: var(--color-jorka-blue);
+        box-shadow: 0 0 0 4px rgb(30 111 255 / 0.12);
+    }
+
+    .offer-card {
+        @apply flex h-full flex-col justify-between rounded-3xl border border-white/[0.07] bg-jorka-card/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-jorka-blue/35 sm:p-7;
+    }
+
+    .offer-card-featured {
+        @apply border-jorka-blue/45 bg-jorka-card shadow-2xl shadow-jorka-blue/10;
+    }
+
+    .offer-number {
+        @apply font-heading text-4xl font-bold text-jorka-blue/40;
+    }
+
+    .offer-label {
+        @apply mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-jorka-light;
+    }
+
+    .offer-title {
+        @apply mt-3 font-heading text-2xl font-semibold text-white;
+    }
+
+    .offer-price {
+        @apply mt-4 font-heading text-xl font-bold text-white;
+    }
+
+    .offer-description {
+        @apply mt-4 text-sm leading-6 text-jorka-muted;
+    }
+
+    .offer-list {
+        @apply mt-6 list-disc space-y-2 border-t border-white/10 pt-6 pl-5 text-sm leading-6 text-slate-300 marker:text-jorka-blue;
+    }
+
+    .conditions-panel {
+        @apply rounded-2xl border border-white/[0.07] bg-jorka-dark/55 p-6 sm:p-7;
+    }
+
+    .conditions-panel summary {
+        @apply font-heading font-semibold text-white marker:text-jorka-blue;
+    }
+
+    .benefit-card {
+        @apply rounded-2xl border border-white/[0.07] bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-jorka-blue/30 hover:bg-white/[0.055];
+    }
+
+    .benefit-card h3 {
+        @apply mt-5 font-heading text-lg font-semibold text-white;
+    }
+
+    .benefit-card p {
+        @apply mt-3 text-sm leading-6 text-jorka-muted;
+    }
+
+    .benefit-index {
+        @apply font-heading text-sm font-bold text-jorka-blue;
+    }
+
+    .project-card {
+        @apply overflow-hidden rounded-3xl border border-white/[0.07] bg-jorka-card/65 transition duration-300 hover:-translate-y-1 hover:border-jorka-blue/35;
+    }
+
+    .project-card h3 {
+        @apply mt-2 font-heading text-xl font-semibold text-white;
+    }
+
+    .project-card p:not(.project-type) {
+        @apply mt-3 text-sm leading-6 text-jorka-muted;
+    }
+
+    .project-type {
+        @apply text-xs font-semibold uppercase tracking-[0.14em] text-jorka-light;
+    }
+
+    .project-visual {
+        @apply relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-jorka-dark;
+    }
+
+    .project-visual img {
+        @apply h-full w-full object-cover transition duration-500;
+    }
+
+    .project-card:hover .project-visual img {
+        transform: scale(1.035);
+    }
+
+    .project-fallback {
+        @apply flex h-full flex-col items-start justify-end p-7;
+        background-color: #101c37;
+    }
+
+    .project-fallback span {
+        @apply text-xs font-semibold uppercase tracking-[0.16em] text-jorka-light;
+    }
+
+    .project-fallback strong {
+        @apply mt-3 font-heading text-3xl font-bold text-white;
+    }
+
+    .text-link {
+        @apply inline-flex text-sm font-semibold text-jorka-light underline decoration-jorka-blue/35 underline-offset-4 transition-colors hover:text-white;
+    }
+
+    .case-study {
+        @apply grid gap-10 rounded-3xl border border-jorka-blue/20 bg-jorka-dark/65 p-7 sm:p-9 lg:grid-cols-[0.8fr_1.2fr] lg:p-10;
+    }
+
+    .case-study p:not(.eyebrow, .case-label) {
+        @apply mt-2 text-sm leading-6 text-jorka-muted;
+    }
+
+    .case-label {
+        @apply text-xs font-semibold uppercase tracking-[0.14em] text-jorka-light;
+    }
+
+    .process-list {
+        @apply relative space-y-3;
+    }
+
+    .process-list::before {
+        content: "";
+        position: absolute;
+        top: 2rem;
+        bottom: 2rem;
+        left: 1.5rem;
+        width: 1px;
+        background: rgb(30 111 255 / 0.28);
+    }
+
+    .process-list li {
+        @apply relative flex gap-5 rounded-2xl border border-transparent p-4 transition-colors hover:border-white/[0.07] hover:bg-white/[0.03] sm:p-5;
+    }
+
+    .process-list li > span {
+        @apply relative z-10 flex size-12 shrink-0 items-center justify-center rounded-full border border-jorka-blue/30 bg-jorka-dark font-heading text-sm font-bold text-jorka-light;
+    }
+
+    .process-list h3 {
+        @apply font-heading text-lg font-semibold text-white;
+    }
+
+    .process-list p {
+        @apply mt-1 text-sm leading-6 text-jorka-muted;
+    }
+
+    .about-fact {
+        @apply rounded-xl border border-white/[0.07] bg-jorka-dark/55 p-4;
+    }
+
+    .about-fact dt {
+        @apply text-xs uppercase tracking-[0.12em] text-slate-500;
+    }
+
+    .about-fact dd {
+        @apply mt-2 text-sm font-semibold text-white;
+    }
+
+    .faq-item {
+        @apply rounded-2xl border border-white/[0.07] bg-white/[0.035] p-5 transition-colors open:border-jorka-blue/30 open:bg-white/[0.055] sm:p-6;
+    }
+
+    .faq-item summary {
+        @apply font-heading text-base font-semibold leading-6 text-white marker:text-jorka-blue;
+    }
+
+    .faq-item p {
+        @apply mt-4 pr-2 text-sm leading-6 text-jorka-muted;
+    }
+
+    .contact-panel {
+        @apply rounded-[2rem] border border-jorka-blue/25 bg-jorka-card p-7 shadow-2xl shadow-black/20 sm:p-10 lg:p-14;
+    }
+
+    .floating-contact {
+        @apply fixed bottom-5 right-5 z-40 inline-flex min-h-12 items-center justify-center rounded-full border border-white/10 bg-jorka-blue px-5 text-sm font-semibold text-white shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:bg-jorka-light sm:bottom-7 sm:right-7;
+    }
 }
 
-/* ===================================================== */
-/* UTILITY : glow-spotlight - halo qui suit la souris      */
-/* ===================================================== */
-@utility glow-spotlight {
-  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), color-mix(in srgb, var(--color-primary) 8%, transparent), transparent 80%);
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+@keyframes hero-in {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* ===================================================== */
-/* UTILITY : reveal - apparition au scroll                 */
-/* ===================================================== */
-@utility reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+@keyframes menu-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@utility reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
+@layer utilities {
+    .hero-enter {
+        opacity: 0;
+        animation: hero-in 720ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .hero-delay-1 {
+        animation-delay: 100ms;
+    }
+
+    .hero-delay-2 {
+        animation-delay: 200ms;
+    }
+
+    .hero-delay-3 {
+        animation-delay: 300ms;
+    }
+
+    #mobile-menu:not([hidden]) {
+        animation: menu-in 200ms ease-out;
+    }
+
+    .js [data-reveal] {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+            opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+            transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .js [data-reveal="left"] {
+        transform: translateX(-30px);
+    }
+
+    .js [data-reveal="right"] {
+        transform: translateX(30px);
+    }
+
+    .js [data-reveal].is-visible {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 
-@utility reveal-left {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
 
-@utility reveal-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 
-@utility reveal-visible-side {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* ===================================================== */
-/* UTILITY : tilt-card - effet 3D au survol                */
-/* ===================================================== */
-@utility tilt-card {
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-@utility tilt-card-inner {
-  transform: translateZ(20px);
-}
-
-/* ===================================================== */
-/* UTILITY : typewriter-cursor - curseur clignotant         */
-/* ===================================================== */
-@utility typewriter-cursor {
-  &::after {
-    content: '|';
-    animation: blink 0.8s step-end infinite;
-    color: var(--color-primary);
-    margin-left: 2px;
-  }
-}
-
-@keyframes blink {
-  from, to { color: transparent; }
-  50% { color: var(--color-primary); }
-}
-
-/* ===================================================== */
-/* UTILITY : floating-blob - flottement lent des halos      */
-/* ===================================================== */
-@utility floating-blob {
-  animation: float 10s ease-in-out infinite alternate;
-}
-
-@keyframes float {
-  0%   { transform: translateY(0px) scale(1); }
-  50%  { transform: translateY(-15px) scale(1.05); }
-  100% { transform: translateY(5px) scale(0.95); }
-}
-
-/* ===================================================== */
-/* UTILITY : btn-gradient - CTA principal en degrade        */
-/* (remplace btn-primary la ou la v1 utilise un degrade)    */
-/* ===================================================== */
-@utility btn-gradient {
-  background-image: linear-gradient(to top right, var(--color-primary), var(--color-secondary));
-  color: var(--color-primary-content);
-  border-color: transparent;
-
-  &:hover {
-    background-image: linear-gradient(to top right, var(--color-primary), var(--color-secondary));
-    filter: brightness(1.08);
-    border-color: transparent;
-  }
+    .hero-enter,
+    .js [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
