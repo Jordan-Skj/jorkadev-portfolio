@@ -69,13 +69,18 @@
     }
 
     html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
         background: var(--color-jorka-dark);
         scroll-padding-top: 6rem;
     }
 
     body {
-        min-width: 320px;
-        overflow-x: hidden;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        overflow-x: clip;
     }
 
     body.menu-open {
@@ -112,6 +117,10 @@
 @layer components {
     .section-shell {
         @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+    }
+
+    .section-shell>* {
+        min-width: 0;
     }
 
     .skip-link {
@@ -339,7 +348,7 @@
         @apply relative flex gap-5 rounded-2xl border border-transparent p-4 transition-colors hover:border-white/[0.07] hover:bg-white/[0.03] sm:p-5;
     }
 
-    .process-list li > span {
+    .process-list li>span {
         @apply relative z-10 flex size-12 shrink-0 items-center justify-center rounded-full border border-jorka-blue/30 bg-jorka-dark font-heading text-sm font-bold text-jorka-light;
     }
 
@@ -389,6 +398,7 @@
         opacity: 0;
         transform: translateY(24px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -400,6 +410,7 @@
         opacity: 0;
         transform: translateY(-8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -436,12 +447,14 @@
             transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .js [data-reveal="left"] {
-        transform: translateX(-30px);
-    }
+    @media (min-width: 768px) {
+        .js [data-reveal="left"] {
+            transform: translateX(-30px);
+        }
 
-    .js [data-reveal="right"] {
-        transform: translateX(30px);
+        .js [data-reveal="right"] {
+            transform: translateX(30px);
+        }
     }
 
     .js [data-reveal].is-visible {
