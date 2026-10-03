@@ -2,60 +2,97 @@
 <html lang="fr-CD" class="scroll-smooth">
 
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BJ4VRZVVM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-3BJ4VRZVVM');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
+        gtag("config", "G-3BJ4VRZVVM");
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- À remplacer une seule fois avant la mise en ligne : VOTRE-DOMAINE.com -->
-    <title>Création de sites web à Kinshasa | JorkaDev</title>
+    <!-- SEO principal -->
+    <title>Jourdain Shongo | JorkaDev — Sites web à Kinshasa</title>
+
     <meta name="description"
-        content="JorkaDev crée des sites web modernes et rapides pour les entreprises, écoles et associations à Kinshasa et partout en RDC, à partir de 100 $.">
-    <meta name="author" content="Jourdain, créateur de JorkaDev">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        content="Jourdain Shongo, développeur web et créateur de JorkaDev, conçoit des sites web professionnels pour entreprises, écoles, associations et commerces à Kinshasa et partout en RDC.">
+
+    <meta name="author" content="Jourdain Shongo">
+
+    <meta name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <meta name="googlebot"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#070D1F">
     <meta name="color-scheme" content="dark">
 
-    <!-- Référencement local -->
+    <!-- SEO local -->
     <meta name="geo.region" content="CD-KN">
     <meta name="geo.placename" content="Kinshasa">
-    <link rel="canonical" href="https://jordan-skj.github.io/jorkadev-portfolio/">
-    <link rel="alternate" hreflang="fr-CD" href="https://jordan-skj.github.io/jorkadev-portfolio/">
-    <link rel="alternate" hreflang="x-default" href="https://jordan-skj.github.io/jorkadev-portfolio/">
 
-    <!-- Partage Facebook, WhatsApp et LinkedIn -->
+    <!-- URL officielle -->
+    <link rel="canonical" href="https://jordan-skj.github.io/jorkadev-portfolio/">
+
+    <link rel="alternate" hreflang="fr-CD"
+        href="https://jordan-skj.github.io/jorkadev-portfolio/">
+
+    <link rel="alternate" hreflang="x-default"
+        href="https://jordan-skj.github.io/jorkadev-portfolio/">
+
+    <!-- Aperçu Facebook, WhatsApp, LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_CD">
     <meta property="og:site_name" content="JorkaDev">
-    <meta property="og:title" content="JorkaDev — Création de sites web à Kinshasa et en RDC">
+
+    <meta property="og:title"
+        content="Jourdain Shongo | JorkaDev — Sites web à Kinshasa">
+
     <meta property="og:description"
-        content="Des sites web professionnels, rapides et adaptés aux entreprises, écoles, associations et entrepreneurs congolais.">
-    <meta property="og:url" content="https://jordan-skj.github.io/jorkadev-portfolio/">
-    <meta property="og:image" content="https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png">
+        content="Des sites web professionnels, rapides et utiles pour les entreprises, écoles, associations et commerces en RDC.">
+
+    <meta property="og:url"
+        content="https://jordan-skj.github.io/jorkadev-portfolio/">
+
+    <meta property="og:image"
+        content="https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png">
+
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="539">
-    <meta property="og:image:alt" content="JorkaDev, création de sites web professionnels en RDC">
+
+    <meta property="og:image:alt"
+        content="JorkaDev, création de sites web professionnels à Kinshasa et en RDC">
 
     <!-- Aperçu X / Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JorkaDev — Création de sites web à Kinshasa">
+
+    <meta name="twitter:title"
+        content="Jourdain Shongo | JorkaDev — Sites web à Kinshasa">
+
     <meta name="twitter:description"
         content="Des sites modernes, rapides et utiles pour développer la présence en ligne de votre activité.">
-    <meta name="twitter:image" content="https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png">
-    <meta name="twitter:image:alt" content="JorkaDev, création de sites web professionnels en RDC">
 
+    <meta name="twitter:image"
+        content="https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png">
+
+    <meta name="twitter:image:alt"
+        content="JorkaDev, création de sites web professionnels à Kinshasa et en RDC">
+
+    <!-- Icône et application -->
     <link rel="icon" type="image/png" href="./src/images/logo-jorkadev.png">
     <link rel="manifest" href="./site.webmanifest">
+
+    <!-- Performance -->
     <link rel="preload" as="image" href="./src/images/profile.webp" fetchpriority="high">
     <link rel="stylesheet" href="./src/output.css">
 
@@ -63,177 +100,226 @@
         document.documentElement.classList.add("js");
     </script>
 
-    <!-- Données structurées : entreprise, offres, auteur et FAQ -->
+    <!-- Données structurées SEO + compréhension par les moteurs IA -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#website",
-          "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
-          "name": "JorkaDev",
-          "description": "Création de sites web professionnels à Kinshasa et partout en République démocratique du Congo.",
-          "inLanguage": "fr-CD",
-          "publisher": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business" }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#webpage",
-          "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
-          "name": "Création de sites web à Kinshasa | JorkaDev",
-          "description": "JorkaDev crée des sites web modernes et rapides pour les entreprises, écoles et associations à Kinshasa et partout en RDC.",
-          "isPartOf": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#website" },
-          "about": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business" },
-          "primaryImageOfPage": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#primaryimage" },
-          "inLanguage": "fr-CD"
-        },
-        {
-          "@type": "ImageObject",
-          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#primaryimage",
-          "url": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
-          "contentUrl": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
-          "width": 1080,
-          "height": 539,
-          "caption": "JorkaDev — Création de sites web professionnels en RDC"
-        },
-        {
-          "@type": ["Organization", "ProfessionalService"],
-          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business",
-          "name": "JorkaDev",
-          "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
-          "logo": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/logo-jorkadev.png",
-          "image": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
-          "description": "Service de création de landing pages, sites vitrines, portfolios, refontes et optimisation SEO de base pour les activités en RDC.",
-          "slogan": "Le web, pensé pour votre entreprise.",
-          "email": "mailto:jorkaskj@proton.me",
-          "telephone": "+243808981347",
-          "priceRange": "À partir de 100 USD",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kinshasa",
-            "addressRegion": "Kinshasa",
-            "addressCountry": "CD"
-          },
-          "areaServed": [
-            { "@type": "City", "name": "Kinshasa" },
-            { "@type": "Country", "name": "République démocratique du Congo" }
-          ],
-          "founder": {
-            "@type": "Person",
-            "name": "Jourdain",
-            "jobTitle": "Développeur web et créateur de JorkaDev"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+243808981347",
-            "email": "jorkaskj@proton.me",
-            "contactType": "service client",
-            "availableLanguage": ["français"],
-            "areaServed": "CD"
-          },
-          "sameAs": ["https://www.facebook.com/jorkadev"],
-          "knowsAbout": [
-            "Création de sites web",
-            "Landing pages",
-            "Sites vitrines",
-            "Design responsive",
-            "Référencement naturel",
-            "Intégration WhatsApp"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Offres de création de sites web",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "name": "Landing page",
-                "price": "100",
-                "priceCurrency": "USD",
-                "url": "https://jordan-skj.github.io/jorkadev-portfolio/#services",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Création de landing page",
-                  "description": "Page professionnelle responsive avec contact WhatsApp, SEO de base et mise en ligne."
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#website",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
+                "name": "JorkaDev",
+                "description": "Création de sites web professionnels à Kinshasa et partout en République démocratique du Congo.",
+                "inLanguage": "fr-CD",
+                "publisher": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business"
                 }
-              },
-              {
-                "@type": "Offer",
-                "name": "Site vitrine multipage",
-                "price": "180",
-                "priceCurrency": "USD",
-                "url": "https://jordan-skj.github.io/jorkadev-portfolio/#services",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Création de site vitrine multipage",
-                  "description": "Site responsive pouvant comporter jusqu’à cinq pages, avec SEO de base et formulaire de contact."
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#webpage",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
+                "name": "Jourdain Shongo | JorkaDev — Sites web à Kinshasa",
+                "description": "Jourdain Shongo, créateur de JorkaDev, conçoit des sites web professionnels pour les entreprises, écoles, associations et commerces en RDC.",
+                "isPartOf": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#website"
+                },
+                "author": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#jourdain-shongo"
+                },
+                "creator": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#jourdain-shongo"
+                },
+                "about": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business"
+                },
+                "primaryImageOfPage": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#primaryimage"
+                },
+                "inLanguage": "fr-CD"
+            },
+            {
+                "@type": "ImageObject",
+                "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#primaryimage",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
+                "contentUrl": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
+                "width": 1080,
+                "height": 539,
+                "caption": "JorkaDev — Création de sites web professionnels en RDC"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#jourdain-shongo",
+                "name": "Jourdain Shongo",
+                "jobTitle": "Développeur web et créateur de JorkaDev",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
+                "image": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/profile.webp",
+                "worksFor": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Kinshasa",
+                    "addressCountry": "CD"
+                },
+                "knowsAbout": [
+                    "Création de sites web",
+                    "Landing pages",
+                    "Sites vitrines",
+                    "Développement web",
+                    "Design responsive",
+                    "Référencement naturel",
+                    "Intégration WhatsApp"
+                ]
+            },
+            {
+                "@type": [
+                    "Organization",
+                    "ProfessionalService"
+                ],
+                "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business",
+                "name": "JorkaDev",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
+                "logo": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/logo-jorkadev.png",
+                "image": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
+                "description": "JorkaDev accompagne les entreprises, écoles, associations et commerces avec la création de landing pages, sites vitrines, portfolios, refontes et optimisation SEO de base en RDC.",
+                "slogan": "Le web, pensé pour votre entreprise.",
+                "email": "mailto:jorkaskj@proton.me",
+                "telephone": "+243808981347",
+                "priceRange": "À partir de 100 USD",
+                "founder": {
+                    "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#jourdain-shongo"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Kinshasa",
+                    "addressRegion": "Kinshasa",
+                    "addressCountry": "CD"
+                },
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "Kinshasa"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "République démocratique du Congo"
+                    }
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+243808981347",
+                    "email": "jorkaskj@proton.me",
+                    "contactType": "service client",
+                    "availableLanguage": [
+                        "français"
+                    ],
+                    "areaServed": "CD"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/jorkadev"
+                ],
+                "knowsAbout": [
+                    "Création de sites web",
+                    "Landing pages",
+                    "Sites vitrines",
+                    "Design responsive",
+                    "Référencement naturel",
+                    "Intégration WhatsApp"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Offres de création de sites web",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "name": "Landing page",
+                            "price": "100",
+                            "priceCurrency": "USD",
+                            "url": "https://jordan-skj.github.io/jorkadev-portfolio/#services",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Création de landing page",
+                                "description": "Page professionnelle responsive avec contact WhatsApp, SEO de base et mise en ligne."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "Site vitrine multipage",
+                            "price": "180",
+                            "priceCurrency": "USD",
+                            "url": "https://jordan-skj.github.io/jorkadev-portfolio/#services",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Création de site vitrine multipage",
+                                "description": "Site responsive pouvant comporter jusqu’à cinq pages, avec SEO de base et formulaire de contact."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "Projet web personnalisé",
+                            "url": "https://jordan-skj.github.io/jorkadev-portfolio/#contact",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Développement web personnalisé",
+                                "description": "Projet sur devis selon les fonctionnalités et les intégrations demandées."
+                            }
+                        }
+                    ]
                 }
-              },
-              {
-                "@type": "Offer",
-                "name": "Projet web personnalisé",
-                "url": "https://jordan-skj.github.io/jorkadev-portfolio/#contact",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Développement web personnalisé",
-                  "description": "Projet sur devis selon les fonctionnalités et les intégrations demandées."
-                }
-              }
-            ]
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#faq-schema",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Que comprend le prix affiché ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le prix comprend les éléments indiqués dans l’offre choisie, le design responsive, l’optimisation de base et la mise en ligne. Le périmètre exact est confirmé dans le devis avant le démarrage."
-              }
             },
             {
-              "@type": "Question",
-              "name": "Combien de temps faut-il pour créer un site ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Une landing page demande généralement cinq à sept jours ouvrés. Un site vitrine multipage demande généralement dix à quinze jours ouvrés après réception de tous les contenus nécessaires."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le site fonctionnera-t-il sur téléphone ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Chaque site est conçu pour s’adapter aux téléphones, tablettes et ordinateurs."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Dois-je être à Kinshasa pour travailler avec JorkaDev ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Non. Le brief, les échanges, les validations et la livraison peuvent se faire à distance par WhatsApp et par e-mail, partout en RDC."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le site apparaîtra-t-il immédiatement sur Google ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le site reçoit de bonnes fondations techniques et une optimisation SEO de base. Son indexation et son positionnement évoluent ensuite selon le contenu, la concurrence et le temps."
-              }
+                "@type": "FAQPage",
+                "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#faq-schema",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Que comprend le prix affiché ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Le prix comprend les éléments indiqués dans l’offre choisie, le design responsive, l’optimisation de base et la mise en ligne. Le périmètre exact est confirmé dans le devis avant le démarrage."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Combien de temps faut-il pour créer un site ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Une landing page demande généralement cinq à sept jours ouvrés. Un site vitrine multipage demande généralement dix à quinze jours ouvrés après réception de tous les contenus nécessaires."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Le site fonctionnera-t-il sur téléphone ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Oui. Chaque site est conçu pour s’adapter aux téléphones, tablettes et ordinateurs."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Dois-je être à Kinshasa pour travailler avec JorkaDev ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Non. Le brief, les échanges, les validations et la livraison peuvent se faire à distance par WhatsApp et par e-mail, partout en RDC."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Le site apparaîtra-t-il immédiatement sur Google ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Le site reçoit de bonnes fondations techniques et une optimisation SEO de base. Son indexation et son positionnement évoluent ensuite selon le contenu, la concurrence et le temps."
+                        }
+                    }
+                ]
             }
-          ]
-        }
-      ]
+        ]
     }
     </script>
 </head>
-
-<body class="bg-jorka-dark font-body text-white antialiased">
+    <body class="bg-jorka-dark font-body text-white antialiased">
     <a href="#contenu" class="skip-link">Aller au contenu principal</a>
     <div id="scroll-progress" class="fixed left-0 top-0 z-[70] h-0.5 w-0 bg-jorka-blue" aria-hidden="true"></div>
 
