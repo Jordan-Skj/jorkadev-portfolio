@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jordan-skj.github.io/jorkadev-portfolio/sitemap.xml
