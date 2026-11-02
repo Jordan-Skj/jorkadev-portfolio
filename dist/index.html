@@ -2,6 +2,15 @@
 <html lang="fr-CD" class="scroll-smooth">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BJ4VRZVVM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3BJ4VRZVVM');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,9 +28,9 @@
     <!-- Référencement local -->
     <meta name="geo.region" content="CD-KN">
     <meta name="geo.placename" content="Kinshasa">
-    <link rel="canonical" href="https://VOTRE-DOMAINE.com/">
-    <link rel="alternate" hreflang="fr-CD" href="https://VOTRE-DOMAINE.com/">
-    <link rel="alternate" hreflang="x-default" href="https://VOTRE-DOMAINE.com/">
+    <link rel="canonical" href="https://jordan-skj.github.io/jorkadev-portfolio/">
+    <link rel="alternate" hreflang="fr-CD" href="https://jordan-skj.github.io/jorkadev-portfolio/">
+    <link rel="alternate" hreflang="x-default" href="https://jordan-skj.github.io/jorkadev-portfolio/">
 
     <!-- Partage Facebook, WhatsApp et LinkedIn -->
     <meta property="og:type" content="website">
@@ -30,8 +39,8 @@
     <meta property="og:title" content="JorkaDev — Création de sites web à Kinshasa et en RDC">
     <meta property="og:description"
         content="Des sites web professionnels, rapides et adaptés aux entreprises, écoles, associations et entrepreneurs congolais.">
-    <meta property="og:url" content="https://VOTRE-DOMAINE.com/">
-    <meta property="og:image" content="https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png">
+    <meta property="og:url" content="https://jordan-skj.github.io/jorkadev-portfolio/">
+    <meta property="og:image" content="https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="539">
@@ -42,12 +51,18 @@
     <meta name="twitter:title" content="JorkaDev — Création de sites web à Kinshasa">
     <meta name="twitter:description"
         content="Des sites modernes, rapides et utiles pour développer la présence en ligne de votre activité.">
-    <meta name="twitter:image" content="https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png">
+    <meta name="twitter:image" content="https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png">
     <meta name="twitter:image:alt" content="JorkaDev, création de sites web professionnels en RDC">
 
     <link rel="icon" type="image/png" href="./assets/logo-jorkadev-CxcF55Pi.png">
     <link rel="manifest" href="./assets/site-DVA_uJvP.webmanifest">
-    <link rel="preload" as="image" href="./assets/profile-BlYZfAMZ.png" fetchpriority="high">
+
+    <!-- Performance : image du hero + polices principales -->
+    <link rel="preload" as="image" href="./assets/profile-XlVQ102b.webp" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/SpaceGrotesk-Bold-RjhwGPKo.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/Inter-Regular-C38fXH4l.woff2">
+
+    <link rel="stylesheet" href="./src/corrections.css">
 
     <script>
         document.documentElement.classList.add("js");
@@ -60,40 +75,40 @@
       "@graph": [
         {
           "@type": "WebSite",
-          "@id": "https://VOTRE-DOMAINE.com/#website",
-          "url": "https://VOTRE-DOMAINE.com/",
+          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#website",
+          "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
           "name": "JorkaDev",
           "description": "Création de sites web professionnels à Kinshasa et partout en République démocratique du Congo.",
           "inLanguage": "fr-CD",
-          "publisher": { "@id": "https://VOTRE-DOMAINE.com/#business" }
+          "publisher": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business" }
         },
         {
           "@type": "WebPage",
-          "@id": "https://VOTRE-DOMAINE.com/#webpage",
-          "url": "https://VOTRE-DOMAINE.com/",
+          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#webpage",
+          "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
           "name": "Création de sites web à Kinshasa | JorkaDev",
           "description": "JorkaDev crée des sites web modernes et rapides pour les entreprises, écoles et associations à Kinshasa et partout en RDC.",
-          "isPartOf": { "@id": "https://VOTRE-DOMAINE.com/#website" },
-          "about": { "@id": "https://VOTRE-DOMAINE.com/#business" },
-          "primaryImageOfPage": { "@id": "https://VOTRE-DOMAINE.com/#primaryimage" },
+          "isPartOf": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#website" },
+          "about": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business" },
+          "primaryImageOfPage": { "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#primaryimage" },
           "inLanguage": "fr-CD"
         },
         {
           "@type": "ImageObject",
-          "@id": "https://VOTRE-DOMAINE.com/#primaryimage",
-          "url": "https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png",
-          "contentUrl": "https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png",
+          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#primaryimage",
+          "url": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
+          "contentUrl": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
           "width": 1080,
           "height": 539,
           "caption": "JorkaDev — Création de sites web professionnels en RDC"
         },
         {
           "@type": ["Organization", "ProfessionalService"],
-          "@id": "https://VOTRE-DOMAINE.com/#business",
+          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#business",
           "name": "JorkaDev",
-          "url": "https://VOTRE-DOMAINE.com/",
-          "logo": "https://VOTRE-DOMAINE.com/src/images/logo-jorkadev.png",
-          "image": "https://VOTRE-DOMAINE.com/src/images/og-jorkadev.png",
+          "url": "https://jordan-skj.github.io/jorkadev-portfolio/",
+          "logo": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/logo-jorkadev.png",
+          "image": "https://jordan-skj.github.io/jorkadev-portfolio/src/images/og-jorkadev.png",
           "description": "Service de création de landing pages, sites vitrines, portfolios, refontes et optimisation SEO de base pour les activités en RDC.",
           "slogan": "Le web, pensé pour votre entreprise.",
           "email": "mailto:jorkaskj@proton.me",
@@ -140,7 +155,7 @@
                 "name": "Landing page",
                 "price": "100",
                 "priceCurrency": "USD",
-                "url": "https://VOTRE-DOMAINE.com/#services",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/#services",
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Création de landing page",
@@ -152,7 +167,7 @@
                 "name": "Site vitrine multipage",
                 "price": "180",
                 "priceCurrency": "USD",
-                "url": "https://VOTRE-DOMAINE.com/#services",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/#services",
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Création de site vitrine multipage",
@@ -162,7 +177,7 @@
               {
                 "@type": "Offer",
                 "name": "Projet web personnalisé",
-                "url": "https://VOTRE-DOMAINE.com/#contact",
+                "url": "https://jordan-skj.github.io/jorkadev-portfolio/#contact",
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Développement web personnalisé",
@@ -174,7 +189,7 @@
         },
         {
           "@type": "FAQPage",
-          "@id": "https://VOTRE-DOMAINE.com/#faq-schema",
+          "@id": "https://jordan-skj.github.io/jorkadev-portfolio/#faq-schema",
           "mainEntity": [
             {
               "@type": "Question",
@@ -221,15 +236,15 @@
       ]
     }
     </script>
-  <script type="module" crossorigin src="./assets/index-DuY36Oxg.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BCHR2qRV.css">
+  <script type="module" crossorigin src="./assets/index-Blws3vi8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BTmC_s4T.css">
 </head>
 
 <body class="bg-jorka-dark font-body text-white antialiased">
     <a href="#contenu" class="skip-link">Aller au contenu principal</a>
-    <div id="scroll-progress" class="fixed left-0 top-0 z-[70] h-0.5 w-0 bg-jorka-blue" aria-hidden="true"></div>
+    <div id="scroll-progress" class="fixed left-0 top-0 z-[70] h-0.5 w-full bg-jorka-blue" aria-hidden="true"></div>
 
-    <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50">
         <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8"
             aria-label="Navigation principale">
             <a href="#accueil" class="font-heading text-2xl font-bold tracking-tight text-white"
@@ -260,14 +275,12 @@
                     <svg data-close-icon class="hidden size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M6 18 18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                     </svg>
-                    <span class="sr-only" data-menu-label>Ouvrir le menu</span>
                 </button>
             </div>
         </nav>
 
         <div id="mobile-menu"
-            class="border-t border-white/10 bg-jorka-dark/95 px-5 pb-6 pt-3 shadow-2xl backdrop-blur-xl lg:hidden"
-            hidden>
+            class="border-t border-white/10 bg-jorka-dark/95 px-5 pb-6 pt-3 shadow-2xl lg:hidden" hidden>
             <ul class="mx-auto flex max-w-7xl flex-col gap-1">
                 <li><a class="mobile-nav-link" data-nav-link href="#accueil">Accueil</a></li>
                 <li><a class="mobile-nav-link" data-nav-link href="#services">Services</a></li>
@@ -275,7 +288,11 @@
                 <li><a class="mobile-nav-link" data-nav-link href="#processus">Processus</a></li>
                 <li><a class="mobile-nav-link" data-nav-link href="#a-propos">À propos</a></li>
                 <li><a class="mobile-nav-link" data-nav-link href="#faq">FAQ</a></li>
-                <li class="pt-3"><a class="button-primary w-full" href="#contact">Me contacter</a></li>
+                <li class="pt-3">
+                    <a class="button-primary w-full"
+                        href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+                        target="_blank" rel="noopener noreferrer">Discuter du projet</a>
+                </li>
             </ul>
         </div>
     </header>
@@ -313,10 +330,10 @@
                     </ul>
                 </div>
 
-                <figure class="hero-enter hero-delay-2 mx-auto w-full max-w-md lg:justify-self-end">
+                <figure class="mx-auto w-full max-w-md lg:justify-self-end">
                     <div
                         class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-jorka-card p-2 shadow-2xl shadow-black/35">
-                        <img src="./assets/profile-BlYZfAMZ.png" alt="Jourdain, développeur web et créateur de JorkaDev"
+                        <img src="./assets/profile-XlVQ102b.webp" alt="Jourdain, développeur web et créateur de JorkaDev"
                             class="aspect-[4/5] w-full rounded-[1.55rem] object-cover object-center" width="596"
                             height="896" loading="eager" fetchpriority="high">
                         <div
@@ -334,7 +351,7 @@
 
         <section id="services" data-section class="scroll-mt-24 border-y border-white/[0.06] bg-jorka-surface py-24">
             <div class="section-shell">
-                <header class="mx-auto max-w-3xl text-center" data-reveal>
+                <header class="mx-auto max-w-3xl text-center">
                     <p class="eyebrow">Services et tarifs</p>
                     <h2 class="section-title">Choisissez une solution adaptée à votre activité</h2>
                     <p class="section-intro mx-auto">
@@ -344,7 +361,7 @@
                 </header>
 
                 <div class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
-                    <article class="offer-card" data-reveal>
+                    <article class="offer-card">
                         <div>
                             <p class="offer-number">01</p>
                             <p class="offer-label">Pour présenter une offre précise</p>
@@ -366,7 +383,7 @@
                             offre</a>
                     </article>
 
-                    <article class="offer-card offer-card-featured" data-reveal data-reveal-delay="100">
+                    <article class="offer-card offer-card-featured">
                         <div>
                             <p
                                 class="mb-5 inline-flex rounded-full bg-jorka-blue/15 px-3 py-1 text-xs font-semibold text-jorka-light">
@@ -391,7 +408,7 @@
                             site</a>
                     </article>
 
-                    <article class="offer-card" data-reveal data-reveal-delay="200">
+                    <article class="offer-card">
                         <div>
                             <p class="offer-number">03</p>
                             <p class="offer-label">Pour un besoin spécifique</p>
@@ -414,7 +431,7 @@
                     </article>
                 </div>
 
-                <details class="conditions-panel mt-8" data-reveal>
+                <details class="conditions-panel mt-8">
                     <summary>Voir les conditions essentielles</summary>
                     <div class="mt-6 grid gap-4 text-sm leading-6 text-slate-300 md:grid-cols-2">
                         <p><strong class="text-white">Paiement :</strong> 50&nbsp;% d’acompte au démarrage, puis le
@@ -436,7 +453,7 @@
 
         <section id="benefices" class="py-24">
             <div class="section-shell">
-                <header class="max-w-3xl" data-reveal>
+                <header class="max-w-3xl">
                     <p class="eyebrow">Bénéfices concrets</p>
                     <h2 class="section-title">Ce que votre site doit réellement apporter</h2>
                     <p class="section-intro">Un bon site ne sert pas seulement à faire joli. Il doit rassurer, informer
@@ -444,33 +461,33 @@
                 </header>
 
                 <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    <article class="benefit-card" data-reveal>
+                    <article class="benefit-card">
                         <span class="benefit-index">01</span>
                         <h3>Une identité crédible</h3>
                         <p>Un design cohérent avec votre activité pour inspirer confiance dès les premières secondes.
                         </p>
                     </article>
-                    <article class="benefit-card" data-reveal data-reveal-delay="80">
+                    <article class="benefit-card">
                         <span class="benefit-index">02</span>
                         <h3>Une expérience mobile claire</h3>
                         <p>Une interface adaptée aux téléphones, tablettes et ordinateurs, sans perte d’information.</p>
                     </article>
-                    <article class="benefit-card" data-reveal data-reveal-delay="160">
+                    <article class="benefit-card">
                         <span class="benefit-index">03</span>
                         <h3>Un chargement rapide</h3>
                         <p>Une structure légère pour réduire l’attente et conserver l’attention de vos visiteurs.</p>
                     </article>
-                    <article class="benefit-card" data-reveal>
+                    <article class="benefit-card">
                         <span class="benefit-index">04</span>
                         <h3>Un contact sans friction</h3>
                         <p>Des appels à l’action visibles vers WhatsApp, le téléphone ou l’e-mail.</p>
                     </article>
-                    <article class="benefit-card" data-reveal data-reveal-delay="80">
+                    <article class="benefit-card">
                         <span class="benefit-index">05</span>
                         <h3>Une lecture sans effort</h3>
                         <p>Vos informations importantes sont organisées pour être comprises en un coup d’œil.</p>
                     </article>
-                    <article class="benefit-card" data-reveal data-reveal-delay="160">
+                    <article class="benefit-card">
                         <span class="benefit-index">06</span>
                         <h3>De bonnes bases SEO</h3>
                         <p>Titres, métadonnées, structure sémantique et performance préparés pour l’indexation.</p>
@@ -482,7 +499,7 @@
         <section id="realisations" data-section
             class="scroll-mt-24 border-y border-white/[0.06] bg-jorka-surface py-24">
             <div class="section-shell">
-                <header class="mx-auto max-w-3xl text-center" data-reveal>
+                <header class="mx-auto max-w-3xl text-center">
                     <p class="eyebrow">Réalisations</p>
                     <h2 class="section-title">Des projets concrets, pas seulement des promesses</h2>
                     <p class="section-intro mx-auto">Quelques projets réalisés ou conçus pour démontrer mon approche de
@@ -490,9 +507,9 @@
                 </header>
 
                 <div class="mt-12 grid gap-6 lg:grid-cols-3">
-                    <article class="project-card" data-reveal>
+                    <article class="project-card">
                         <div class="project-visual">
-                            <img data-project-image src="./assets/gscom-DQMUssCy.png"
+                            <img data-project-image src="./assets/gscom-Db6rQhqI.webp"
                                 alt="Aperçu du site institutionnel G.SCO.M" loading="lazy">
                             <div data-project-fallback class="project-fallback" hidden>
                                 <span>Site institutionnel</span>
@@ -508,9 +525,9 @@
                         </div>
                     </article>
 
-                    <article class="project-card" data-reveal data-reveal-delay="100">
+                    <article class="project-card">
                         <div class="project-visual">
-                            <img data-project-image src="./assets/socotem-C1PnoZ_z.png"
+                            <img data-project-image src="./assets/socotem-B_0D66Jw.webp"
                                 alt="Aperçu du site vitrine SOCOTEM" loading="lazy">
                             <div data-project-fallback class="project-fallback" hidden>
                                 <span>Site vitrine</span>
@@ -526,9 +543,9 @@
                         </div>
                     </article>
 
-                    <article class="project-card" data-reveal data-reveal-delay="200">
+                    <article class="project-card">
                         <div class="project-visual">
-                            <img data-project-image src="./assets/piskas-holding-DId2TD_v.png"
+                            <img data-project-image src="./assets/piskas-holding-BLyGLxSJ.webp"
                                 alt="Aperçu du site de Piskas Holding" loading="lazy">
                             <div data-project-fallback class="project-fallback" hidden>
                                 <span>Site d’entreprise</span>
@@ -540,12 +557,14 @@
                             <h3>Piskas Holding — Site complet</h3>
                             <p>Une présentation structurée des activités, des services, des offres et des moyens de
                                 contacter directement l’entreprise.</p>
-                            <a href="#contact" class="text-link">Visiter le site</a>
+                            <!-- À REMPLACER par l'URL réelle du site de Piskas Holding -->
+                            <a href="https://URL-DU-SITE-PISKAS" target="_blank" rel="noopener noreferrer"
+                                class="text-link">Visiter le site</a>
                         </div>
                     </article>
                 </div>
 
-                <article id="etude-de-cas" class="case-study mt-12" data-reveal>
+                <article id="etude-de-cas" class="case-study mt-12">
                     <div>
                         <p class="eyebrow">Étude de cas · SOCOTEM</p>
                         <h3 class="mt-4 font-heading text-2xl font-semibold text-white sm:text-3xl">Transformer une
@@ -574,7 +593,7 @@
 
         <section id="processus" data-section class="scroll-mt-24 py-24">
             <div class="section-shell grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
-                <header class="lg:sticky lg:top-28 lg:self-start" data-reveal="left">
+                <header class="lg:sticky lg:top-28 lg:self-start">
                     <p class="eyebrow">Processus</p>
                     <h2 class="section-title">De l’idée à la mise en ligne</h2>
                     <p class="section-intro">Vous savez à chaque étape ce qui est en cours, ce qui doit être validé et
@@ -583,7 +602,7 @@
                 </header>
 
                 <ol class="process-list">
-                    <li data-reveal>
+                    <li>
                         <span>01</span>
                         <div>
                             <h3>Découverte</h3>
@@ -591,7 +610,7 @@
                                 disponibles.</p>
                         </div>
                     </li>
-                    <li data-reveal>
+                    <li>
                         <span>02</span>
                         <div>
                             <h3>Structure et contenu</h3>
@@ -599,14 +618,14 @@
                                 visiteur.</p>
                         </div>
                     </li>
-                    <li data-reveal>
+                    <li>
                         <span>03</span>
                         <div>
                             <h3>Conception et développement</h3>
                             <p>Le design devient un site fonctionnel, responsive et cohérent avec votre identité.</p>
                         </div>
                     </li>
-                    <li data-reveal>
+                    <li>
                         <span>04</span>
                         <div>
                             <h3>Vérification et optimisation</h3>
@@ -614,7 +633,7 @@
                                 SEO.</p>
                         </div>
                     </li>
-                    <li data-reveal>
+                    <li>
                         <span>05</span>
                         <div>
                             <h3>Mise en ligne</h3>
@@ -627,13 +646,13 @@
 
         <section id="a-propos" data-section class="scroll-mt-24 border-y border-white/[0.06] bg-jorka-surface py-24">
             <div class="section-shell grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
-                <figure data-reveal="left" class="mx-auto w-full max-w-md">
-                    <img src="./assets/profile-BlYZfAMZ.png" alt="Portrait de Jourdain, créateur de JorkaDev"
+                <figure class="mx-auto w-full max-w-md">
+                    <img src="./assets/profile-XlVQ102b.webp" alt="Portrait de Jourdain, créateur de JorkaDev"
                         class="aspect-[4/5] w-full rounded-[2rem] border border-white/10 object-cover object-center"
                         width="596" height="896" loading="lazy">
                 </figure>
 
-                <div data-reveal="right">
+                <div>
                     <p class="eyebrow">Qui suis-je ?</p>
                     <h2 class="section-title">Derrière JorkaDev, il y a une personne</h2>
                     <div class="mt-6 space-y-4 text-base leading-7 text-jorka-muted">
@@ -669,7 +688,7 @@
 
         <section id="faq" data-section class="scroll-mt-24 py-24">
             <div class="section-shell grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
-                <header data-reveal="left">
+                <header>
                     <p class="eyebrow">Questions fréquentes</p>
                     <h2 class="section-title">Les réponses avant de commencer</h2>
                     <p class="section-intro">Si votre question n’apparaît pas ici, envoyez-la directement sur WhatsApp.
@@ -678,7 +697,7 @@
                         target="_blank" rel="noopener noreferrer" class="text-link mt-6">Poser une question</a>
                 </header>
 
-                <div class="space-y-3" data-accordion data-reveal="right">
+                <div class="space-y-3" data-accordion>
                     <details class="faq-item" open>
                         <summary>Que comprend le prix affiché ?</summary>
                         <p>Le prix comprend les éléments indiqués dans l’offre choisie, le design responsive,
@@ -710,7 +729,7 @@
         </section>
 
         <section id="contact" data-section class="scroll-mt-24 px-5 pb-24 sm:px-6 lg:px-8">
-            <div class="contact-panel mx-auto max-w-6xl" data-reveal>
+            <div class="contact-panel mx-auto max-w-6xl">
                 <div class="max-w-3xl">
                     <p class="eyebrow">Votre présence en ligne commence ici</p>
                     <h2 class="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">

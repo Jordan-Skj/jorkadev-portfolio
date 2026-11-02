@@ -3,11 +3,12 @@
 const navbar = document.querySelector("#navbar");
 const menuButton = document.querySelector("#menu-button");
 const mobileMenu = document.querySelector("#mobile-menu");
-const menuLabel = menuButton?.querySelector("[data-menu-label]");
 const menuIcon = menuButton?.querySelector("[data-menu-icon]");
 const closeIcon = menuButton?.querySelector("[data-close-icon]");
 const scrollProgress = document.querySelector("#scroll-progress");
 const navLinks = [...document.querySelectorAll("[data-nav-link]")];
+
+/* ---------- Menu mobile ---------- */
 
 function setMenuState(isOpen) {
     if (!menuButton || !mobileMenu) return;
@@ -19,8 +20,6 @@ function setMenuState(isOpen) {
 
     menuIcon?.classList.toggle("hidden", isOpen);
     closeIcon?.classList.toggle("hidden", !isOpen);
-
-    if (menuLabel) menuLabel.textContent = isOpen ? "Fermer le menu" : "Ouvrir le menu";
 }
 
 menuButton?.addEventListener("click", () => {
@@ -32,53 +31,57 @@ navLinks.forEach((link) => {
     link.addEventListener("click", () => setMenuState(false));
 });
 
-window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) setMenuState(false);
-});
-
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") setMenuState(false);
 });
 
+/* ---------- Scroll : barre de progression + navbar ---------- */
+
+let maxScroll = 0;
+let ticking = false;
+
+function measure() {
+    maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+}
+
 function updateScrollInterface() {
     const scrollTop = window.scrollY;
-    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollableHeight > 0 ? (scrollTop / scrollableHeight) * 100 : 0;
 
     navbar?.classList.toggle("nav-scrolled", scrollTop > 20);
 
     if (scrollProgress) {
-        scrollProgress.style.width = `${Math.min(progress, 100)}%`;
+        const progress = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
+        scrollProgress.style.transform = `scaleX(${progress})`;
     }
+
+    ticking = false;
 }
 
+function requestScrollUpdate() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateScrollInterface);
+}
+
+measure();
 updateScrollInterface();
-window.addEventListener("scroll", updateScrollInterface, { passive: true });
 
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const revealElements = [...document.querySelectorAll("[data-reveal]")];
+window.addEventListener("scroll", requestScrollUpdate, { passive: true });
 
-revealElements.forEach((element) => {
-    const delay = Number(element.dataset.revealDelay || 0);
-    element.style.transitionDelay = `${delay}ms`;
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) setMenuState(false);
+    measure();
+    requestScrollUpdate();
 });
 
-if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-    revealElements.forEach((element) => element.classList.add("is-visible"));
-} else {
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            });
-        },
-        { threshold: 0.14, rootMargin: "0px 0px -45px" }
-    );
-
-    revealElements.forEach((element) => revealObserver.observe(element));
+if ("ResizeObserver" in window) {
+    new ResizeObserver(() => {
+        measure();
+        requestScrollUpdate();
+    }).observe(document.body);
 }
+
+/* ---------- Navigation active selon la section ---------- */
 
 const sections = [...document.querySelectorAll("[data-section][id]")];
 
@@ -112,6 +115,8 @@ if ("IntersectionObserver" in window) {
     activateNavigation("accueil");
 }
 
+/* ---------- FAQ : un seul élément ouvert ---------- */
+
 document.querySelectorAll("[data-accordion]").forEach((accordion) => {
     const items = [...accordion.querySelectorAll("details")];
 
@@ -124,6 +129,8 @@ document.querySelectorAll("[data-accordion]").forEach((accordion) => {
         });
     });
 });
+
+/* ---------- Images de projets : repli si l'image échoue ---------- */
 
 function showProjectFallback(image) {
     image.hidden = true;
@@ -138,6 +145,8 @@ document.querySelectorAll("[data-project-image]").forEach((image) => {
         showProjectFallback(image);
     }
 });
+
+/* ---------- Année du pied de page ---------- */
 
 document.querySelectorAll("[data-current-year]").forEach((element) => {
     element.textContent = String(new Date().getFullYear());
