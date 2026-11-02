@@ -1,0 +1,23 @@
+# JorkaDev
+
+> JorkaDev crée des sites web pour les petits business en République démocratique du Congo : restaurants, salons de coiffure, ONG, écoles, associations, commerces et entrepreneurs. Basé à Kinshasa, créé par Jourdain, développeur web. Travail à distance possible partout en RDC.
+
+## Offres et prix
+- Landing page : à partir de 100 USD. Une page responsive avec bouton WhatsApp, SEO technique de base, domaine et hébergement inclus pendant 1 an. Délai indicatif : 5 à 7 jours ouvrés.
+- Site vitrine multipage : à partir de 180 USD. Jusqu'à 5 pages, SEO de base sur chaque page, formulaire de contact, domaine et hébergement inclus pendant 1 an. Délai indicatif : 10 à 15 jours ouvrés.
+- Projet personnalisé : sur devis (catalogue, réservation, blog, refonte d'un site existant, intégrations sur mesure).
+
+## Conditions 
+- Paiement : 50 % d'acompte au démarrage, solde avant la mise en ligne définitive.
+- Deux séries de retouches incluses.
+- 15 jours de correction des anomalies liées à la livraison initiale.
+- À partir de la deuxième année, domaine et hébergement restent à la charge du client.
+
+## Contact
+- WhatsApp : +243 808 981 347
+- E-mail : jorkaskj@proton.me
+- Facebook : https://www.facebook.com/jorkadev
+- Zone de service : Kinshasa et toute la RDC
+
+## Pages
+- [Accueil, offres, FAQ et contact](https://jordan-skj.github.io/jorkadev-portfolio/): présentation complète de JorkaDev

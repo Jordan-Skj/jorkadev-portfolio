@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Carte de visite virtuelle JorkaDev</title>
+  <desc id="desc">Aperçu d'une carte de visite virtuelle pour Jourdain Shongo, développeur web.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101c37"/>
+      <stop offset="1" stop-color="#1746b5"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#59a9ff"/>
+      <stop offset="1" stop-color="#8ecbff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="28" fill="url(#background)"/>
+  <circle cx="690" cy="65" r="155" fill="#59a9ff" opacity=".12"/>
+  <circle cx="690" cy="65" r="95" fill="#59a9ff" opacity=".08"/>
+  <path d="M0 420C170 345 290 470 455 390S700 330 800 365V500H0Z" fill="#070d1f" opacity=".42"/>
+  <text x="64" y="92" fill="#8ecbff" font-family="Arial, sans-serif" font-size="24" font-weight="700">JorkaDev</text>
+  <text x="64" y="238" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="700">Jourdain Shongo</text>
+  <rect x="64" y="262" width="92" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="64" y="310" fill="#d7e5ff" font-family="Arial, sans-serif" font-size="22">Développeur web</text>
+  <text x="64" y="366" fill="#d7e5ff" font-family="Arial, sans-serif" font-size="18">Sites web professionnels · Kinshasa</text>
+  <text x="64" y="430" fill="#8ecbff" font-family="Arial, sans-serif" font-size="18">jorkadev.dev</text>
+  <circle cx="694" cy="365" r="58" fill="#fff" opacity=".1"/>
+  <path d="M675 365h38M694 346v38" stroke="#8ecbff" stroke-width="5" stroke-linecap="round"/>
+</svg>

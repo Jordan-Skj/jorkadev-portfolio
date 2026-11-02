@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @source "../index.html";
+@source "../projets.html";
 @source "./script.js";
 
 @font-face {

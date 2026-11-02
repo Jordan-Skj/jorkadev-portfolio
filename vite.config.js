@@ -1,3 +1,4 @@
+import { resolve } from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -6,5 +7,11 @@ export default defineConfig({
     build: {
         outDir: "dist",
         emptyOutDir: true,
+        rollupOptions: {
+            input: {
+                index: resolve(process.cwd(), "index.html"),
+                projets: resolve(process.cwd(), "projets.html"),
+            },
+        },
     },
 });

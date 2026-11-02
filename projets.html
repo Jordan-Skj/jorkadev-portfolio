@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr-CD" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes projets | JorkaDev</title>
+    <meta name="description"
+        content="Découvrez les projets web réalisés et conçus par Jourdain Shongo avec JorkaDev.">
+    <meta name="author" content="Jourdain Shongo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jordan-skj.github.io/jorkadev-portfolio/projets.html">
+    <link rel="icon" type="image/png" href="./src/images/logo-jorkadev.png">
+    <link rel="stylesheet" href="./src/output.css">
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+</head>
+
+<body class="bg-jorka-dark font-body text-white antialiased">
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+    <div id="scroll-progress" class="fixed left-0 top-0 z-[70] h-0.5 w-full bg-jorka-blue" aria-hidden="true"></div>
+
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50">
+        <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8"
+            aria-label="Navigation principale">
+            <a href="./index.html#accueil" class="font-heading text-2xl font-bold tracking-tight text-white"
+                aria-label="JorkaDev, retour à l’accueil">
+                Jorka<span class="text-jorka-blue">Dev</span>
+            </a>
+            <ul class="hidden items-center gap-7 lg:flex">
+                <li><a class="nav-link" href="./index.html#accueil">Accueil</a></li>
+                <li><a class="nav-link is-active" aria-current="page" href="./projets.html">Tous les projets</a></li>
+                <li><a class="nav-link" href="./index.html#services">Services</a></li>
+                <li><a class="nav-link" href="./index.html#contact">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+                    target="_blank" rel="noopener noreferrer" class="button-primary hidden lg:inline-flex">
+                    Discuter du projet
+                </a>
+                <button id="menu-button" type="button" class="menu-button lg:hidden" aria-controls="mobile-menu"
+                    aria-expanded="false" aria-label="Ouvrir le menu">
+                    <svg data-menu-icon class="size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                    <svg data-close-icon class="hidden size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 18 18 6M6 6l12 12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu"
+            class="border-t border-white/10 bg-jorka-dark/95 px-5 pb-6 pt-3 shadow-2xl lg:hidden" hidden>
+            <ul class="mx-auto flex max-w-7xl flex-col gap-1">
+                <li><a class="mobile-nav-link" href="./index.html#accueil">Accueil</a></li>
+                <li><a class="mobile-nav-link is-active" aria-current="page" href="./projets.html">Tous les projets</a></li>
+                <li><a class="mobile-nav-link" href="./index.html#services">Services</a></li>
+                <li><a class="mobile-nav-link" href="./index.html#contact">Contact</a></li>
+                <li class="pt-3">
+                    <a class="button-primary w-full"
+                        href="https://wa.me/243808981347?text=Bonjour%20JorkaDev%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+                        target="_blank" rel="noopener noreferrer">Discuter du projet</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="contenu">
+        <section class="section-shell scroll-mt-24 pt-36 pb-20">
+            <header class="mx-auto max-w-3xl text-center">
+                <p class="eyebrow">Portfolio</p>
+                <h1 class="section-title">Tous mes projets</h1>
+                <p class="section-intro mx-auto">
+                    Une sélection de sites réalisés ou conçus pour aider des entreprises, des écoles et des réseaux
+                    professionnels à mieux présenter leur activité en ligne.
+                </p>
+            </header>
+
+            <div class="mt-14 grid gap-6 lg:grid-cols-4">
+                <article class="project-card">
+                    <div class="project-visual">
+                        <img data-project-image src="./src/images/projects/gscom.webp"
+                            alt="Aperçu du site institutionnel G.SCO.M" loading="lazy">
+                        <div data-project-fallback class="project-fallback" hidden>
+                            <span>Site institutionnel</span>
+                            <strong>G.SCO.M</strong>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="project-type">Établissement scolaire</p>
+                        <h2>G.SCO.M — Site institutionnel</h2>
+                        <p>Présentation de l’établissement, de ses formations, de son équipe et des informations utiles
+                            aux parents et aux élèves.</p>
+                        <a href="https://jordan-skj.github.io/Projet-G.SCO.M/" target="_blank" rel="noopener noreferrer"
+                            class="text-link mt-5">Visiter le site</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <img data-project-image src="./src/images/projects/socotem.webp"
+                            alt="Aperçu du site vitrine SOCOTEM" loading="lazy">
+                        <div data-project-fallback class="project-fallback" hidden>
+                            <span>Site vitrine</span>
+                            <strong>SOCOTEM</strong>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="project-type">Réseau professionnel</p>
+                        <h2>SOCOTEM — Site vitrine</h2>
+                        <p>Une plateforme moderne pour présenter les services, les formations et les activités d’un
+                            réseau de techniciens.</p>
+                        <a href="https://socotem.org/" target="_blank" rel="noopener noreferrer"
+                            class="text-link mt-5">Visiter le site</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <img data-project-image src="./src/images/projects/piskas-holding.webp"
+                            alt="Aperçu du site de Piskas Holding" loading="lazy">
+                        <div data-project-fallback class="project-fallback" hidden>
+                            <span>Site d’entreprise</span>
+                            <strong>Piskas Holding</strong>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="project-type">Entreprise</p>
+                        <h2>Piskas Holding — Site complet</h2>
+                        <p>Une présentation structurée des activités, des services, des offres et des moyens de
+                            contacter directement l’entreprise.</p>
+                        <span class="mt-5 inline-flex text-sm font-semibold text-slate-400">Lien bientôt disponible</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <img src="./src/images/projects/carte-visite-virtuelle.svg"
+                            alt="Aperçu de la carte de visite virtuelle JorkaDev" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <p class="project-type">Identité professionnelle</p>
+                        <h2>Carte de visite virtuelle</h2>
+                        <p>Une carte digitale claire et accessible pour présenter Jourdain Shongo, ses services et ses
+                            moyens de contact en un seul endroit.</p>
+                        <span class="mt-5 inline-flex text-sm font-semibold text-jorka-light">Projet personnel</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/[0.06] bg-jorka-surface px-5 py-12 sm:px-6 lg:px-8">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-jorka-muted sm:flex-row sm:items-center sm:justify-between">
+            <a href="./index.html#accueil" class="font-heading text-2xl font-bold text-white">Jorka<span
+                    class="text-jorka-blue">Dev</span></a>
+            <p>© <span data-current-year>2026</span> JorkaDev. Tous droits réservés.</p>
+            <a class="text-link" href="./index.html#contact">Parlons de votre projet</a>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/script.js"></script>
+</body>
+
+</html>
